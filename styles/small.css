@@ -28,6 +28,10 @@ h6 {
     font-weight: var(--header-font-weight);
 }
 
+h1 {
+    margin-left: 10px;
+}
+
 h2 {
     font-size: 1.5em;
     text-align: center;
@@ -56,6 +60,25 @@ section {
     margin: 10px;
     border: 1px solid var(--dark-background);
     border-radius: 10px;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;
+    min-width: 220px;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding: 5px;
+    border: 2px solid var(--dark-background);
+    box-shadow: 2px 2px 5px var(--dark-background);
+}
+
+figcaption {
+    font-size: .9em;
+    text-align: center;
+    margin-top: 5px;
 }
 
 /* Header Styles */
@@ -169,6 +192,14 @@ nav a.active {
     color: var(--medium-or-light-background-text);
     border: 1px solid var(--dark-background);
     box-shadow: 3px 3px 5px var(--dark-background);
+}
+
+#course-list li.completed::after {
+    content: " ✓";
+}
+
+#credits {
+    text-align: center;
 }
 
 /* Hamburger styles */

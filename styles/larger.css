@@ -1,21 +1,32 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 450px) {
+    /* Layout */
+    main {
+        padding: 20px;
+    }
+
+    #sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
     /* Navigation Bar */
     #navBar {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-
+    
     #navBar a {
         display: block;
         align-content: center;
     }
-
+    
     #hamburger-icon,
     #x-icon {
         display: none;
     }
-
+    
     #filters {
         justify-content: center;
     }
@@ -25,9 +36,15 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-
+    
     #course-list li {
         min-width: 100px;
         flex: 1;
     }
+    
+    
+    section:nth-of-type(3) {
+        grid-column: span 2;
+    }
+
 }
