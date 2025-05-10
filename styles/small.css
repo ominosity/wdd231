@@ -1,0 +1,200 @@
+/* Define variables for common styles */
+:root {
+    --header-font-family: "IBM Plex Serif", serif;
+    --header-font-weight: 600;
+    --body-font-family: "Chivo", sans-serif;
+    --body-font-weight: 400;
+    --dark-background: #005d8f;
+    --dark-background-text: #ffffff;
+    --medium-background: #90e0ef;
+    --medium-or-light-background-text: #1e1e1e;
+    --light-background: #edfafd;
+}
+
+/* Apply common styles to the body */
+body {
+    background-color: #eeeeee;
+    color: var(--medium-or-light-background-text);
+    font-family: var(--body-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--dark-background-text);
+    background-color: var(--dark-background);
+    margin-top: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+
+header,
+footer {
+    background-color: var(--dark-background);
+    color: var(--dark-background-text);
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+}
+
+section {
+    color: var(--medium-or-light-background-text);
+    background-color: var(--light-background);
+    margin: 10px;
+    border: 1px solid var(--dark-background);
+    border-radius: 10px;
+}
+
+/* Header Styles */
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+header img {
+    border: 1px solid var(--light-background);
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 5px var(--medium-background);
+}
+
+#student {
+    font-size: 1.9em;
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    margin-right: 45px;
+    text-align: left;
+}
+
+/* Navbar Styles */
+nav {
+    display: none;
+}
+
+nav.show {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    flex: 1;
+    color: var(--medium-or-light-background-text);
+    text-decoration: none;
+    padding: 8px;
+    background-color: var(--medium-background);
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    cursor: pointer;
+    background-color: var(--light-background);
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: #eeeeee;
+}
+
+/* Certificate Styles */
+#filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 10px 10px 10px;
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    gap: 10px;
+}
+
+#filters a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--medium-or-light-background-text);
+    color: var(--dark-background-text);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px var(--dark-background);
+    text-decoration: none;
+    font-weight: bold;
+    max-width: 100px;
+}
+
+#filters a:hover {
+    background-color: var(--dark-background-text);
+    color: var(--dark-background);
+}
+
+#filters a:active {
+    background-color: var(--medium-or-light-background-text);
+    color: var(--dark-background-text);
+}
+
+#course-list {
+    list-style-type: none;
+    padding: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#course-list li {
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--light-background);
+    color: var(--medium-or-light-background-text-background-text);
+    border: 1px solid var(--dark-background);
+    box-shadow: 3px 3px 5px var(--medium-or-light-background-text);
+}
+
+#course-list li.completed {
+    background-color: var(--medium-background);
+    color: var(--medium-or-light-background-text);
+    border: 1px solid var(--dark-background);
+    box-shadow: 3px 3px 5px var(--dark-background);
+}
+
+/* Hamburger styles */
+#hamburger-icon,
+#x-icon {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+#hamburger-icon {
+    top: 10px;
+    right: 10px;
+}
+
+#x-icon {
+    top: 13px;
+    right: 2px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle.show {
+    display: block;
+}

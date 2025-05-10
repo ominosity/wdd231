@@ -1,0 +1,33 @@
+@media screen and (min-width: 320px) {
+    /* Navigation Bar */
+    #navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #navBar a {
+        display: block;
+        align-content: center;
+    }
+
+    #hamburger-icon,
+    #x-icon {
+        display: none;
+    }
+
+    #filters {
+        justify-content: center;
+    }
+    
+    /* Course List */
+    #course-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #course-list li {
+        min-width: 100px;
+        flex: 1;
+    }
+}
