@@ -114,6 +114,7 @@ function cseCourses() {
     courseListElement.innerHTML = "";
     const creditsArray = [];
     const filteredCourses = courses.filter(course => course.subject.toLowerCase() === 'cse')
+    
     filteredCourses.forEach(course => {
         const courseItem = document.createElement("li");
         courseItem.textContent = `${course.subject} ${course.number}`;
