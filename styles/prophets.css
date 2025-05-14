@@ -1,0 +1,90 @@
+:root {
+    --header-font: "David Libre", serif;
+    --header-font-weight: 700;
+    --body-font: "Chivo", sans-serif;
+    --body-font-weight: 400;
+    --dark-green: #60756f;
+    --light-blue: #d5d7ec;
+    --tan: #dddad7;
+    --light-text: #fff;
+    --dark-text: #081626;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
+}
+
+h1,
+h2 {
+    background-color: var(--dark-green);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--light-text);
+}
+
+h1 {
+    border-top: 3px solid var(--dark-text);
+    border-bottom: 3px solid var(--dark-text);
+    font-size: 3rem;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+h2 {
+    padding: 5px;
+    margin: 0 0 5px 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: var(--body-font-weight);
+    background-color: var(--light-blue);
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: var(--tan);
+    border: 3px solid var(--dark-green);
+    box-shadow: 5px 5px 15px var(--dark-text);
+}
+
+section img {
+    max-width: 95%;
+    display: block;
+    margin: 5px auto 10px auto;
+    box-shadow: 3px 3px 10px var(--dark-text);
+}
+
+p {
+    padding: 0 10px;
+    text-align: center;
+    margin: 0
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+
+}
+
+footer {
+    background-color: var(--dark-green);
+    color: var(--light-text);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-top: 3px solid var(--dark-text);
+    border-bottom: 3px solid var(--dark-text);
+}
