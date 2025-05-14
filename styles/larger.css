@@ -1,4 +1,4 @@
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 550px) {
     /* Layout */
     main {
         padding: 20px;
@@ -9,7 +9,6 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    
     /* Navigation Bar */
     #navBar {
         display: flex;
@@ -18,6 +17,7 @@
     }
     
     #navBar a {
+        flex: 1;
         display: block;
         align-content: center;
     }

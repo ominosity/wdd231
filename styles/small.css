@@ -107,21 +107,27 @@ header img {
 
 /* Navbar Styles */
 nav {
-    display: none;
+    display: grid;
+    grid-template-rows: repeat(5, 0fr);
+    transition: grid-template-rows 0.5s ease-out;
 }
 
 nav.show {
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: repeat(5, 1fr);
 }
 
 nav a {
-    flex: 1;
+    overflow: hidden;
     color: var(--medium-or-light-background-text);
     text-decoration: none;
-    padding: 8px;
     background-color: var(--medium-background);
     font-size: 1.2em;
+    padding: 0px;
+    transition: padding 0.5s ease-out;
+}
+
+nav.show a {
+    padding: 8px;
 }
 
 nav a:hover {
