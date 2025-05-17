@@ -17,6 +17,7 @@
 
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* Overall page styles for every page */
