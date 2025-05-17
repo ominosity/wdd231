@@ -1,7 +1,7 @@
 /* Set common site colors and fonts */
 /* https: //colorkit.co/palette/1686ab-6393af-86be5f/ */
 :root {
-    --primary-color: #1686ab;
+    --primary-color: #137697;
     --secondary-color: #6393af;
     --accent-color: #86be5f;
     --text-color: #1e1e1e;
@@ -166,6 +166,7 @@ footer {
 #type-selector {
     margin: 0 auto;
     max-width: 220px;
+    text-align: center;
 }
 
 #type-selector img {
@@ -201,6 +202,10 @@ footer {
     border-radius: 20px;
     background-color: var(--white-background-color);
     box-shadow: 5px 5px 10px var(--text-color);
+}
+
+.cards section p {
+    text-align: center;
 }
 
 .cards section a {
