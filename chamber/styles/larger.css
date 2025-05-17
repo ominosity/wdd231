@@ -1,4 +1,4 @@
-@media screen and (width >= 600px) {
+@media screen and (width >=600px) {
     main {
         max-width: 1200px;
         margin: 0px auto;
@@ -34,7 +34,7 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     #navBar a {
         min-width: 150px;
         text-align: center;
@@ -47,6 +47,10 @@
         border-left: 1px solid var(--background-color);
     }
 
+    .cards {
+        font-size: 1rem;
+    }
+
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -54,4 +58,14 @@
         margin-top: 20px;
     }
 }
-    
+
+@media screen and (width >= 650px) {
+    .list section {
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px;
+        text-align: left;
+    }
+}

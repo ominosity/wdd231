@@ -189,8 +189,9 @@ footer {
 /* Directory cards styles */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 10px;
+    font-size: .9rem;
 }
 
 .cards section {
@@ -246,10 +247,11 @@ footer {
 
 .list section {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
     align-items: center;
     min-height: 44px;
     padding: 10px;
+    text-align: center;
 }
 
 .list section div {
