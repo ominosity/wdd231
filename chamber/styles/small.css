@@ -248,21 +248,16 @@ footer {
 }
 
 .list section div {
-    padding-left: 10px; 
+    padding-left: 10px;
     padding-right: 10px;
 }
 
 .list section:nth-of-type(even) {
     background-color: var(--secondary-color);
-    color: var(--white-background-color);
 }
 
 .list section a {
     color: var(--text-color);
-}
-
-.list section:nth-of-type(even) a {
-    color: var(--white-background-color);
 }
 
 .list section a:hover {

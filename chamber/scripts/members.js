@@ -44,7 +44,7 @@ const cardTemplate = (data) => {
         caption.textContent = member.name;
         image.setAttribute('src', member.logo_url);
         image.setAttribute('target', '_blank');
-        image.setAttribute('alt', member.name);
+        image.setAttribute('alt', `Logo for ${member.name}`);
         address.textContent = member.address;
         phone.textContent = member.phone_number;
         visibleLink.setAttribute('href', member.url);
