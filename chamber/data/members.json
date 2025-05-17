@@ -1,6 +1,60 @@
 {
-    {
-        "name": "Osaka"
-    }
-
+    "members": [
+        {
+            "name": "Osaka Sushi & Ramen",
+            "address": "2195 14th Ave SE Suite 102 Albany OR 97322",
+            "phone_number": "458-253-2742",
+            "url": "https://www.osakasushialbany.com/",
+            "logo_url": "https://pixel.menusifu.com/6d4e5249746e38527043466c785a73334e7343796a673d3d/0eb84eee31eee355be4cdcddc1ce06a.jpg",
+            "membership-level": 3
+        },
+        {
+            "name": "Rigoberto's Taco Shop",
+            "address": "1720 Pacific Blvd SQ Albany OR 97321",
+            "phone_number": "541-791-4974",
+            "url": "https://rigobertospdx.com/",
+            "logo_url": "https://rigobertospdx.com/images/uploaded/2/logo.png",
+            "membership-level": 2
+        },
+        {
+            "name": "Brick & Mortar Cafe",
+            "address": "222 1st Ave W Ste 4 Albany OR 97321",
+            "phone_number": "541-791-7845",
+            "url": "https://brickandmortarcafe.com/",
+            "logo_url": "https://brickandmortarcafe.com/wp-content/uploads/2021/12/BMC-logo-medium.png",
+            "membership-level": 3
+        },
+        {
+            "name": "ABC House",
+            "address": "228 SW 5th Ave Albany OR 97321",
+            "phone_number": "541-926-2203",
+            "url": "https://www.abchouse.org/",
+            "logo_url": "https://static.wixstatic.com/media/2336e1_7867a2c6c4da438786f8773843c8c6d3~mv2.png/v1/crop/x_14,y_0,w_1043,h_454/fill/w_314,h_138,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Land_bg%25403x_edited.png",
+            "membership-level": 3
+        },
+        {
+            "name": "Albany Antique Mall",
+            "address": "145 2nd Ave SW Albany OR 97321",
+            "phone_number": "541-704-0109",
+            "url": "https://albanyantiquemall.com/",
+            "logo_url": "https://albanyantiquemall.com/wp-content/uploads/2012/01/albany-antique-mall-logo-hours.jpg",
+            "membership-level": 2
+        },
+        {
+            "name": "Beggs Tire & Wheel",
+            "address": "1315 Pacific Blvd SE Albany OR 97321",
+            "phone_number": "541-967-8476",
+            "url": "https://www.beggstire.com/",
+            "logo_url": "https://www.beggstire.com/Portals/64/logo.png",
+            "membership-level": 1
+        },
+        {
+            "name": "Fitzpatrick Painting and Construction",
+            "address": "37949 Century Dr NE Albany, OR 97322",
+            "phone_number": "541-967-8900",
+            "url": "https://www.fitzpatrickpainting.com/",
+            "logo_url": "https://lirp.cdn-website.com/86473fab/dms3rep/multi/opt/fitzpatrick-web-transparent_logotype-color-7dd5db52-320w.png",
+            "membership-level": 1
+        }
+    ]
 }

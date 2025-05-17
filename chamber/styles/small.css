@@ -5,17 +5,19 @@
     --secondary-color: #6393af;
     --accent-color: #86be5f;
     --text-color: #1e1e1e;
+    --background-color: #c9ecf8;
+    --white-background-color: #fff;
     --header-font: "Anton", sans-serif;
     --header-font-weight: 400;
     --body-font: "Poppins",
         sans-serif;
     --body-font-weight: 400;
-    --background-color: #c9ecf8;
+    --testing-border: 1px solid red;
 }
 
 * {
     margin: 0;
-} 
+}
 
 /* Overall page styles for every page */
 body {
@@ -42,14 +44,14 @@ main {
 header,
 footer {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--white-background-color);
 }
 
-/* Banner styling */
+/* Banner styles */
 #banner {
     display: flex;
     flex-direction: row;
-    color: #fff;
+    color: var(--white-background-color);
     align-items: center;
     height: 100px;
 }
@@ -68,13 +70,13 @@ footer {
     justify-content: center;
 }
 
-.stacked p:nth-of-type(1){
+.stacked p:nth-of-type(1) {
     font-family: var(--header-font);
     font-weight: var(--header-font-weight);
     font-size: 1.5rem;
 }
 
-#banner p:nth-of-type(2) {
+.stacked p:nth-of-type(2) {
     font-size: .8rem;
     padding-top: 2px;
 }
@@ -120,9 +122,8 @@ nav.show {
 
 nav a {
     overflow: hidden;
-    color: #fff;
+    color: var(--white-background-color);
     text-decoration: none;
-    /* background-color: var(--primary-color); */
     font-size: 1.2em;
     transition: padding 0.5s ease-out;
 }
@@ -133,14 +134,15 @@ nav.show a {
 
 nav a:hover {
     cursor: pointer;
-     background-color: var(--secondary-color);
-     color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 nav a.active {
     font-weight: bold;
     background-color: var(--background-color);
     color: var(--text-color);
+    cursor: auto;
 }
 
 /* Footer styles */
@@ -157,4 +159,116 @@ footer {
     width: 75px;
     height: 75px;
 
+}
+
+/* Directory icon styles */
+#type-selector {
+    margin: 0 auto;
+    max-width: 220px;
+}
+
+#type-selector img {
+    border: 2px solid var(--text-color);
+    cursor: pointer;
+    box-shadow: 3px 3px 3px var(--text-color);
+    margin: 0 10px 10px 10px;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#type-selector img:hover {
+    border-color: var(--accent-color);
+}
+
+#type-selector img:active {
+    background-color: var(--accent-color);
+}
+
+/* Directory cards styles */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 10px;
+}
+
+.cards section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--white-background-color);
+    box-shadow: 5px 5px 10px var(--text-color);
+}
+
+.cards section a {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cards section:hover {
+    border-color: var(--accent-color);
+}
+
+.cards section a:nth-of-type(2) {
+    text-decoration: underline;
+}
+
+.cards section a:nth-of-type(2):hover {
+    color: var(--accent-color);
+}
+
+.cards section figure {
+    text-align: center;
+}
+
+.cards section figure img {
+    max-width: 200px;
+}
+
+/* Directory grid styles */
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--primary-color);
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--white-background-color);
+}
+
+.list section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px;
+}
+
+.list section div {
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+
+.list section:nth-of-type(even) {
+    background-color: var(--secondary-color);
+    color: var(--white-background-color);
+}
+
+.list section a {
+    color: var(--text-color);
+}
+
+.list section:nth-of-type(even) a {
+    color: var(--white-background-color);
+}
+
+.list section a:hover {
+    color: var(--accent-color);
+
+}
+
+.list section:nth-of-type(even) a:hover {
+    color: var(--accent-color);
 }

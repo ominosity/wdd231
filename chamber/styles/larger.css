@@ -1,0 +1,57 @@
+@media screen and (width >= 550px) {
+    main {
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+    #banner {
+        height: 120px;
+        margin-left: 20px;
+    }
+
+    #banner img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .stacked p:nth-of-type(1) {
+        font-size: 2rem;
+    }
+
+    .stacked p:nth-of-type(2) {
+        font-size: 1.1rem;
+    }
+
+    #x-icon,
+    #hamburger-icon {
+        display: none;
+    }
+
+    #navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #navBar a {
+        min-width: 150px;
+        text-align: center;
+        border-top: 1px solid var(--background-color);
+        border-right: 1px solid var(--background-color);
+        padding: 8px;
+    }
+
+    #navBar a:first-of-type {
+        border-left: 1px solid var(--background-color);
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
+    
