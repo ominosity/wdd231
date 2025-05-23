@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albany, Oregon Chamber of Commerce Directory</title>
+    <title>Albany, Oregon Chamber of Commerce Homepage</title>
     <meta name="author" content="Richard Burgener">
     <meta name="description"
         content="A list of local business and other organizations that belong to the Albany, Oregon Chamber of Commerce">
@@ -25,7 +25,7 @@
 
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 
 <body>
@@ -39,44 +39,57 @@
         </div>
         <div id="hamburger-icon" class="toggle show"><img src="images/hamburger.svg" alt="Hamburger icon"></div>
         <div id="x-icon" class="toggle">X</div>
-        <nav id="navBar"> 
-            <a href="index.html" target="_self">Home</a>
+        <nav id="navBar">
+            <a href="#" target="_self" class="active">Home</a>
             <a href="#" target="_self">Discover</a>
-            <a href="#" target="_self" class="active">Business Directory</a>
+            <a href="directory.html" target="_self">Business Directory</a>
             <a href="#" target="_self">Join</a>
         </nav>
     </header>
     <main>
-        <h1>Directory</h1>
-        <div id="type-selector">
-            <img src="images/grid-icon.svg" alt="An icon to change the directory into grid view" width="40" id="grid-icon">
-            <img src="images/list-icon.svg" alt="An icon to change the directory into list view" width="40" id="list-icon">
-        </div>
-        <div id="directory" class="cards">
-            <!-- Card Template -->
-            <!-- <section>
-                <a href="https://www.osakasushialbany.com">
-                    <figure>
-                        <img src="https://pixel.menusifu.com/6d4e5249746e38527043466c785a73334e7343796a673d3d/0eb84eee31eee355be4cdcddc1ce06a.jpg"
-                            alt="Osaka Sushi & Ramen logo" target="_blank">
-                        <figcaption>Osaka Sushi & Ramen
-                        </figcaption>
-                    </figure>
-                </a>
-                <p>2195 14th Ave SE Suite 102 Albany OR 97322</p>
-                <p>458-253-2742</p>
-                <a href="https://www.osakasushialbany.com" target="_blank">https://www.osakasushialbany.com</a>
-            </section> -->
-
-            <!-- Grid Template -->
-            <!-- <section>
-                <div>Osaka Sushi & Ramen</div>
-                <div>2195 14th Ave SE Suite 102 Albany OR 97322</div>
-                <div>458-253-2742</div>
-                <div><a href="https://www.osakasushialbany.com" target="_blank">https://www.osakasushialbany.com</a>
+        <img id="hero" alt="">
+        <a href="#" id="cta">Keynote Tickets</a>
+        <h1>Home</h1>
+        <div id="sections">
+            <section>
+                <h2>Events</h2>
+                <div id="events">
+                    <ul>
+                        <li>Farmer's Market</li>
+                        <li>Classic Car Show</li>
+                    </ul>
                 </div>
-            </section> -->
+            </section>
+            <section>
+                <h2>Weather</h2>
+                <div id="current-weather">
+                    <figure>
+                        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Partly Cloudy">
+                    </figure>
+                    <div>
+                        <p><span class="bold">75&deg;</span> F</p>
+                        <p>Partly Cloudy</p>
+                        <p>High: 85&deg;</p>
+                        <p>Low: 52&deg;</p>
+                        <p>Humidity: 34%</p>
+                        <p>Sunrise: 7:30am</p>
+                        <p>Sunset: 9:59pm</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Forecast</h2>
+                <div id="weather-forecast">
+                    <p>Today: <span class="bold">90&deg; F</span></p>
+                    <p>Thursday: <span class="bold">89&deg; F</span></p>
+                    <p>Friday: <span class="bold">68&deg; F</span></p>
+                </div>
+            </section>
+            <section id="company-spotlights">
+            </section>
         </div>
+
+
     </main>
     <footer>
         <div id="contact">

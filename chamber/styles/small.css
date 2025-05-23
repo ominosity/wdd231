@@ -12,6 +12,7 @@
     --body-font: "Poppins",
         sans-serif;
     --body-font-weight: 400;
+    --standard-spacing: 10px;
     --testing-border: 1px solid red;
 }
 
@@ -39,7 +40,7 @@ h6 {
 }
 
 main {
-    padding: 10px;
+    padding: var(--standard-spacing);
 }
 
 header,
@@ -47,6 +48,36 @@ footer {
     background-color: var(--primary-color);
     color: var(--white-background-color);
 }
+
+/* Standard section design */
+#sections {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--standard-spacing);
+    background-color: var(--white-background-color);
+    margin-bottom: var(--standard-spacing);
+    min-height: 3rem;
+}
+
+section h2 {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-top-left-radius: var(--standard-spacing);
+    border-top-right-radius: var(--standard-spacing);
+    text-align: center;
+    padding: var(--standard-spacing);
+    font-weight: var(--body-font-weight);
+    font-size: 1.1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 
 /* Banner styles */
 #banner {
@@ -58,7 +89,7 @@ footer {
 }
 
 #banner img {
-    padding: 10px;
+    padding: var(--standard-spacing);
     height: 75px;
     width: 75px;
 }
@@ -148,7 +179,7 @@ nav a.active {
 
 /* Footer styles */
 footer {
-    padding: 10px;
+    padding: var(--standard-spacing);
     line-height: 1.4rem;
 }
 
@@ -173,8 +204,9 @@ footer {
     border: 2px solid var(--text-color);
     cursor: pointer;
     box-shadow: 3px 3px 3px var(--text-color);
-    margin: 0 10px 10px 10px;
-    border-radius: 10px;
+    margin: var(--standard-spacing);
+    margin-top: 0;
+    border-radius: var(--standard-spacing);
     padding: 4px;
 }
 
@@ -190,7 +222,7 @@ footer {
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 10px;
+    grid-gap: var(--standard-spacing);
     font-size: .9rem;
 }
 
@@ -198,7 +230,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: var(--standard-spacing);
     border: 3px solid var(--primary-color);
     border-radius: 20px;
     background-color: var(--white-background-color);
@@ -250,13 +282,13 @@ footer {
     grid-template-rows: 1fr 2fr 1fr 1fr;
     align-items: center;
     min-height: 44px;
-    padding: 10px;
+    padding: var(--standard-spacing);
     text-align: center;
 }
 
 .list section div {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: var(--standard-spacing);
+    padding-right: var(--standard-spacing);
 }
 
 .list section:nth-of-type(even) {
@@ -274,4 +306,36 @@ footer {
 
 .list section:nth-of-type(even) a:hover {
     color: var(--accent-color);
+}
+
+/* Homepage Sections */
+#events {
+    padding: var(--standard-spacing);
+}
+
+#current-weather {
+    display: flex;
+    flex-direction: row;
+}
+
+#current-weather figure {
+    margin-right: 10px;
+}
+
+#current-weather div {
+    display: flex;
+    flex-direction: column;
+    padding: var(--standard-spacing);
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+
+#weather-forecast {
+    padding: var(--standard-spacing);
+    line-height: 2rem;
+}
+
+#company-spotlights {
+    border: none;
+    background: none;
 }

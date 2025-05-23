@@ -47,6 +47,21 @@
         border-left: 1px solid var(--background-color);
     }
 
+    #sections {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-gap: 10px;
+        
+    }
+    
+    section h2 {
+        text-align: left;
+    }
+
+    section:last-of-type {
+        grid-column: span 3;
+    }
+
     .cards {
         font-size: 1rem;
     }
@@ -59,6 +74,7 @@
     }
 }
 
+/* For the directory list-view on medium screens */
 @media screen and (width >=550px) {
     .list section {
         display: grid;
