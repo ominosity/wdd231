@@ -51,15 +51,25 @@
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-gap: 10px;
-        
+
     }
-    
+
     section h2 {
         text-align: left;
     }
 
-    section:last-of-type {
-        grid-column: span 3;
+    #company-spotlights {
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+    }
+
+    #member-card {
+        flex: 1 1 0;
+    }
+
+    #member-card .contact-info p {
+        font-size: .9rem;
     }
 
     .cards {
@@ -72,6 +82,8 @@
         padding: 20px;
         margin-top: 20px;
     }
+
+
 }
 
 /* For the directory list-view on medium screens */

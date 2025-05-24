@@ -6,7 +6,8 @@
             "phone_number": "458-253-2742",
             "url": "https://www.osakasushialbany.com/",
             "logo_url": "images/member_logos/osaka.webp",
-            "membership-level": 3
+            "membership_level": "Gold",
+            "email": "Not provided"
         },
         {
             "name": "Rigoberto's Taco Shop",
@@ -14,7 +15,8 @@
             "phone_number": "541-791-4974",
             "url": "https://rigobertospdx.com/",
             "logo_url": "images/member_logos/rigobertos.webp",
-            "membership-level": 2
+            "membership_level": "Silver",
+            "email": "Not provided"
         },
         {
             "name": "Brick & Mortar Cafe",
@@ -22,7 +24,8 @@
             "phone_number": "541-791-7845",
             "url": "https://brickandmortarcafe.com/",
             "logo_url": "images/member_logos/brick-and-mortar.webp",
-            "membership-level": 3
+            "membership_level": "Gold",
+            "email": "Not provided"
         },
         {
             "name": "ABC House",
@@ -30,7 +33,8 @@
             "phone_number": "541-926-2203",
             "url": "https://www.abchouse.org/",
             "logo_url": "images/member_logos/abc-house.webp",
-            "membership-level": 3
+            "membership_level": "Gold",
+            "email": "info@abchouse.org"
         },
         {
             "name": "Albany Antique Mall",
@@ -38,7 +42,8 @@
             "phone_number": "541-704-0109",
             "url": "https://albanyantiquemall.com/",
             "logo_url": "images/member_logos/antique-mall.webp",
-            "membership-level": 2
+            "membership_level": "Silver",
+            "email": "Not provided"
         },
         {
             "name": "Beggs Tire & Wheel",
@@ -46,7 +51,8 @@
             "phone_number": "541-967-8476",
             "url": "https://www.beggstire.com/",
             "logo_url": "images/member_logos/beggs.webp",
-            "membership-level": 1
+            "membership_level": "Bronze",
+            "email": "Not provided"
         },
         {
             "name": "Fitzpatrick Painting and Construction",
@@ -54,7 +60,8 @@
             "phone_number": "541-967-8900",
             "url": "https://www.fitzpatrickpainting.com/",
             "logo_url": "images/member_logos/fitzpatrick.webp",
-            "membership-level": 1
+            "membership_level": "Bronze",
+            "email": "admin@fitzpatrickpainting.com"
         }
     ]
 }

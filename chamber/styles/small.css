@@ -49,6 +49,46 @@ footer {
     color: var(--white-background-color);
 }
 
+/* Hero Image and CTA */
+#hero {
+    width: 100%;
+    position: relative;
+    background-image: '../images/hero1.jpg';
+}
+
+#hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 7px;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 10px 10px 15px var(--text-color);
+}
+
+#cta {
+    position: absolute;
+    bottom: 13%;
+    right: 7%;
+    display: block;
+    background-color: var(--white-background-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: var(--standard-spacing);
+    border: 3px double var(--primary-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
+    box-shadow: 3px 3px 7px var(--secondary-color);
+}
+
+#cta:hover {
+    border-color: var(--accent-color);
+    background-color: #fff;
+}
+
 /* Standard section design */
 #sections {
     display: flex;
@@ -61,6 +101,7 @@ section {
     background-color: var(--white-background-color);
     margin-bottom: var(--standard-spacing);
     min-height: 3rem;
+    box-shadow: 5px 5px 10px var(--text-color);
 }
 
 section h2 {
@@ -193,6 +234,9 @@ footer {
 
 }
 
+/**************************
+/* Directory page styles **
+/*************************/
 /* Directory icon styles */
 #type-selector {
     margin: 0 auto;
@@ -271,10 +315,8 @@ footer {
 .list {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--primary-color);
     max-width: 1100px;
     margin: 0 auto;
-    background-color: var(--white-background-color);
 }
 
 .list section {
@@ -307,7 +349,9 @@ footer {
 .list section:nth-of-type(even) a:hover {
     color: var(--accent-color);
 }
-
+/********************
+/* Homepage styles **
+/*******************/
 /* Homepage Sections */
 #events {
     padding: var(--standard-spacing);
@@ -338,4 +382,49 @@ footer {
 #company-spotlights {
     border: none;
     background: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
 }
+
+#member-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--standard-spacing);
+    background-color: var(--white-background-color);
+}
+
+#member-card h3 {
+    text-align: center;
+    padding: var(--standard-spacing);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#member-card .contact-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1 0;
+}
+
+#member-card img {
+    max-width: 100px;
+    margin: var(--standard-spacing);
+}
+
+#member-card .contact-info {
+    display: flex;
+    flex-direction: column;
+    padding: var(--standard-spacing);
+}
+
+#member-card .contact-info p {
+    line-height: 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    font-size: .8rem;
+}
+

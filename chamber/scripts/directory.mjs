@@ -1,24 +1,16 @@
+import getMembers from './data.mjs';
+
 /* Assign variable to page members */
 const directoryMember = document.getElementById("directory");
 const gridIcon = document.getElementById('grid-icon');
 const listIcon = document.getElementById('list-icon');
+const data = await getMembers();
 
-/* Get member information from data source */
-const url = "data/members.json";
-
-async function getMembers(format) {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        // console.table(data.members);
-        if (format === "cards") {
-            // directoryMember.classList.add('cards');
-            cardTemplate(data.members);
-        } else {
-            listTemplate(data.members);
-        }
-    } catch (error) {
-        console.error(error);
+function createMemberSections(format) {
+    if (format === "cards") {
+        cardTemplate(data);
+    } else {
+        listTemplate(data);
     }
 }
 
@@ -38,7 +30,7 @@ const cardTemplate = (data) => {
         const address = document.createElement('p');
         const phone = document.createElement('p');
         const visibleLink = document.createElement('a');
-        
+
         /* Set up the elements with the data */
         link.setAttribute('href', member.url);
         caption.textContent = member.name;
@@ -50,8 +42,8 @@ const cardTemplate = (data) => {
         visibleLink.setAttribute('href', member.url);
         visibleLink.setAttribute('target', '_blank');
         visibleLink.textContent = member.url;
-        
-        
+
+
         /* Add the elements to the fragment */
         figure.appendChild(image);
         figure.appendChild(caption);
@@ -81,7 +73,7 @@ const listTemplate = (data) => {
         const phone = document.createElement('div');
         const urlHolder = document.createElement('div');
         const link = document.createElement('a');
-        
+
         /* Set up the elements with the data */
         name.textContent = member.name;
         address.textContent = member.address;
@@ -89,7 +81,7 @@ const listTemplate = (data) => {
         link.setAttribute('href', member.url);
         link.setAttribute('target', '_blank');
         link.textContent = member.url;
-        
+
         /* Add the elements to the fragment */
         section.appendChild(name);
         section.appendChild(address);
@@ -105,12 +97,12 @@ const listTemplate = (data) => {
 
 /* Add event handlers to grid and list icons */
 gridIcon.addEventListener('click', () => {
-    getMembers('cards');
+    createMemberSections('cards');
 });
 
 listIcon.addEventListener('click', () => {
-    getMembers('list');
+    createMemberSections('list');
 });
 
 /* On initial load, use cards */
-getMembers("cards");
+createMemberSections("cards");

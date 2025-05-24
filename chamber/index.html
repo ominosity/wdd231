@@ -26,6 +26,7 @@
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.mjs" type="module"></script>
 </head>
 
 <body>
@@ -47,8 +48,10 @@
         </nav>
     </header>
     <main>
-        <img id="hero" alt="">
-        <a href="#" id="cta">Keynote Tickets</a>
+        <div id="hero">
+            <img alt="" src="images/hero3.jpg">
+            <a href="#" id="cta">Keynote Tickets</a>
+        </div>
         <h1>Home</h1>
         <div id="sections">
             <section>
@@ -85,9 +88,10 @@
                     <p>Friday: <span class="bold">68&deg; F</span></p>
                 </div>
             </section>
-            <section id="company-spotlights">
-            </section>
+            
         </div>
+        <section id="company-spotlights">
+            </section>
 
 
     </main>
