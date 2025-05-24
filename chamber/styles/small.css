@@ -394,6 +394,7 @@ footer {
     border: 1px solid var(--primary-color);
     border-radius: var(--standard-spacing);
     background-color: var(--white-background-color);
+    box-shadow: 5px 5px 10px var(--text-color);
 }
 
 #member-card h3 {
