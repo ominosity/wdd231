@@ -423,9 +423,6 @@ footer {
 
 #member-card .contact-info p {
     line-height: 1.5rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
-    font-size: .8rem;
+    overflow-wrap: anywhere;
 }
 
