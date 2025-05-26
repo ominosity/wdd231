@@ -77,8 +77,10 @@ const courses = [
         completed: false
     }
 ]
+/* Create variables to hold elements */
 const courseListElement = document.getElementById('course-list');
 const creditsElement = document.getElementById('credits');
+const courseDetailsElement = document.getElementById('course-details');
 
 /* Add event listeners to filters */
 const allFilter = document.getElementById('all');
@@ -103,6 +105,8 @@ function filterCourses(filter) {
     filteredCourses.forEach(course => {
         const courseItem = document.createElement("li");
         courseItem.textContent = `${course.subject} ${course.number}`;
+        courseItem.addEventListener('click', () => generateAndShowModal(course));
+
         if (course.completed) {
             courseItem.classList.add("completed");
         }
@@ -112,6 +116,46 @@ function filterCourses(filter) {
 
     const creditsShown = creditsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     creditsElement.innerHTML = `The total number of credits listed below is ${creditsShown}`;
+}
+
+/* Create the modal and populate it with course information */
+function generateAndShowModal(course) {
+    /* Clear existing details */
+    courseDetailsElement.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+    /* Generate fragment elements */
+    const button = document.createElement('button');
+    const header = document.createElement('h3');
+    const courseTitle = document.createElement('h4');
+    const credits = document.createElement('p');
+    const description = document.createElement('p');
+    const certificate = document.createElement('p');
+    const techStack = document.createElement('p');
+    
+    /* Set element attributes */
+    button.textContent = `❌`;
+    button.addEventListener('click', (event) => {
+        courseDetailsElement.close();
+    });
+    header.textContent = `${course.subject} ${course.number}`;
+    courseTitle.textContent = course.title;
+    credits.innerHTML = `<strong>Credits: </strong>${course.credits}`;
+    description.textContent = course.description;
+    certificate.innerHTML = `<strong>Certificate: </strong>${course.certificate}`;
+    techStack.innerHTML = `<strong>Technology: </strong>${course.technology}`;
+    
+    /* Add elements to fragment */
+    fragment.appendChild(button);
+    fragment.appendChild(header);
+    fragment.appendChild(courseTitle);
+    fragment.appendChild(credits);
+    fragment.appendChild(description);
+    fragment.appendChild(certificate);
+    fragment.appendChild(techStack);
+    
+    /* Add fragment to DOM and open the modal */
+    courseDetailsElement.appendChild(fragment);
+    courseDetailsElement.showModal();
 }
 
 /* Prep for initial paint */

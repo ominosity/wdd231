@@ -194,6 +194,10 @@ nav {
         border: 1px solid var(--dark-background);
         box-shadow: 3px 3px 5px var(--medium-or-light-background-text);
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &.completed {
             background-color: var(--medium-background);
             color: var(--medium-or-light-background-text);
@@ -238,5 +242,53 @@ nav {
 
     &.show {
         display: block;
+    }
+}
+
+/* Modal Styles */
+#dialog-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#course-details {
+    align-self: center;
+    justify-self: center;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, .30);
+    border-radius: 10px;
+    border: none;
+
+    &::backdrop {
+        background-color: rgb(0, 0, 0, .50);
+    }
+
+    button {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        padding: 3px;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    h3 {
+        background-color: var(--dark-background);
+        color: var(--dark-background-text);
+        height: 50px;
+        text-align: center;
+        line-height: 44px;
+        font-size: 32px;
+        border-radius: 10px;
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin: 10px 0 0 0;
     }
 }
