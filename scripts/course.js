@@ -85,36 +85,21 @@ const allFilter = document.getElementById('all');
 const cseFilter = document.getElementById('cse');
 const wddFilter = document.getElementById('wdd');
 
-allFilter.addEventListener('click', () => allCourses());
-cseFilter.addEventListener('click', () => cseCourses());
-wddFilter.addEventListener('click', () => wddCourses());
+allFilter.addEventListener('click', () => filterCourses('all'));
+cseFilter.addEventListener('click', () => filterCourses('cse'));
+wddFilter.addEventListener('click', () => filterCourses('wdd'));
 
-/* Function to display all the courses */
-function allCourses() {
+function filterCourses(filter) {
     // Clear the list first
     courseListElement.innerHTML = "";
     const creditsArray = [];
-    courses.forEach(course => {
-        const courseItem = document.createElement("li");
-        courseItem.textContent = `${course.subject} ${course.number}`;
-        if (course.completed) {
-            courseItem.classList.add("completed");
-        }
-        courseListElement.appendChild(courseItem);
-        creditsArray.push(course.credits)
-    });
-    
-    const creditsShown = creditsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-    creditsElement.innerHTML = `The total number of credits listed below is ${creditsShown}`;
-}
+    let filteredCourses = [];
+    if (filter === "all") {
+        filteredCourses = courses;
+    } else {
+        filteredCourses = courses.filter(course => course.subject.toLowerCase() === filter)
+    }
 
-/* Function to display CSE courses */
-function cseCourses() {
-    // Clear the list first
-    courseListElement.innerHTML = "";
-    const creditsArray = [];
-    const filteredCourses = courses.filter(course => course.subject.toLowerCase() === 'cse')
-    
     filteredCourses.forEach(course => {
         const courseItem = document.createElement("li");
         courseItem.textContent = `${course.subject} ${course.number}`;
@@ -124,30 +109,10 @@ function cseCourses() {
         courseListElement.appendChild(courseItem);
         creditsArray.push(course.credits)
     });
-    
-    const creditsShown = creditsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-    creditsElement.innerHTML = `The total number of credits listed below is ${creditsShown}`;
-}
 
-/* Function to display CSE courses */
-function wddCourses() {
-    // Clear the list first
-    courseListElement.innerHTML = "";
-    const creditsArray = [];
-    const filteredCourses = courses.filter(course => course.subject.toLowerCase() === 'wdd')
-    filteredCourses.forEach(course => {
-        const courseItem = document.createElement("li");
-        courseItem.textContent = `${course.subject} ${course.number}`;
-        if (course.completed) {
-            courseItem.classList.add("completed");
-        }
-        courseListElement.appendChild(courseItem);
-        creditsArray.push(course.credits)
-    });
-    
     const creditsShown = creditsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     creditsElement.innerHTML = `The total number of credits listed below is ${creditsShown}`;
 }
 
 /* Prep for initial paint */
-allCourses();
+filterCourses('all');

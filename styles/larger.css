@@ -14,12 +14,13 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-    }
-    
-    #navBar a {
-        flex: 1;
-        display: block;
-        align-content: center;
+
+        a {
+            flex: 1;
+            display: block;
+            align-content: center;
+            padding: 10px;
+        }
     }
     
     #hamburger-icon,
@@ -35,13 +36,12 @@
     #course-list {
         flex-direction: row;
         flex-wrap: wrap;
+
+        li {
+            min-width: 100px;
+            flex: 1;
+        }
     }
-    
-    #course-list li {
-        min-width: 100px;
-        flex: 1;
-    }
-    
     
     section:nth-of-type(3) {
         grid-column: span 2;
