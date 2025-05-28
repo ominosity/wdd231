@@ -1,0 +1,72 @@
+.continuous,
+.on-hover {
+    border: 5px solid gray;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-right-color: white;
+    border-left-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 0 0 1rem #ccccff;
+    margin: 50px;
+
+    &::after {
+        font-size: 25px;
+        line-height: 25px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.continuous {
+    animation: rotate 1.5s linear infinite;
+
+    &::after {
+        content: '⚙️';
+        animation: biggify 1.5s linear infinite alternate;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes biggify {
+    from {
+        transform: scale(60%);
+    }
+
+    to {
+        transform: scale(80%);
+    }
+}
+
+.on-hover {
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+
+    &::after {
+        content: '⚙️';
+        transform: scale(0%);
+        transition: transform 1.5s linear;
+    }
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+
+    &:hover::after {
+        content: '⚙️';
+        transform: scale(200%);
+    }
+}
