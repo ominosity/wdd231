@@ -6,7 +6,7 @@ const apiKey = 'ee3364dc18ba4b28be95b5f65832d2ac';
 /* API query string */
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=44.636&lon=-123.105&units=imperial&appid=${apiKey}`;
 
-const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=44.636&lon=-123.105&units=imperial&cnt=32&appid=${apiKey}`;
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=44.636&lon=-123.105&units=imperial&cnt=36&appid=${apiKey}`;
 
 async function updateWeather() {
     /* Current Weather */
@@ -49,7 +49,7 @@ function updateWeatherElement(data) {
     const sunriseTime = new Date(data.sys.sunrise * 1000);
     /* Display only the time portion */
     const sunriseText = sunriseTime.toLocaleTimeString();
-    
+
     /* Convert UNIX time by adding milliseconds */
     const sunsetTime = new Date(data.sys.sunset * 1000);
     /* Display only the time portion */
@@ -92,7 +92,7 @@ function updateWeatherElement(data) {
     div.appendChild(sunrise);
     div.appendChild(sunset);
     fragment.appendChild(div);
- 
+
     currentWeatherElement.innerHTML = '';
     currentWeatherElement.append(fragment);
 }
@@ -106,7 +106,7 @@ function updateForecastElement(data) {
     const day2Data = getDaySummary(2, data);
     const day2DayOfWeek = new Intl.DateTimeFormat("en-US", options).format(day2Data.date);
     // console.log(day2DayOfWeek);
-    
+
     const day3Data = getDaySummary(3, data);
     const day3DayOfWeek = new Intl.DateTimeFormat("en-US", options).format(day3Data.date);
     // console.log(day3DayOfWeek);
@@ -132,16 +132,19 @@ function updateForecastElement(data) {
 
 function getDaySummary(day, data) {
     /* Determine today so we can only look at the next 3 days */
-    let today = new Date()
+    let chosenDay = new Date();
+    chosenDay.setDate(chosenDay.getDate() + day);
+    // console.table(data.list);
+    console.log(`Day: ${day} Chosen Day: ${chosenDay.toLocaleDateString()}`);
 
     /* Filter the data into an array of items matching today plus the number of days in the future */
     const filteredList = data.list.filter(item => {
         let date = new Date(item.dt * 1000);
         // console.log(`Forecast Date: ${date.getFullYear()}, ${date.getMonth()}, ${date.getDate()}`);
         // console.log(`Today Date: ${today} -- ${today.getFullYear()}, ${today.getMonth()}, ${today.getDate()}`);
-        if (date.getFullYear() == today.getFullYear() &&
-            date.getMonth() == today.getMonth() &&
-            date.getDate() == today.getDate() + day
+        if (date.getFullYear() == chosenDay.getFullYear() &&
+            date.getMonth() == chosenDay.getMonth() &&
+            date.getDate() == chosenDay.getDate()
         ) {
             return true;
         }
@@ -155,7 +158,7 @@ function getDaySummary(day, data) {
     const low = Math.min(...temperatures);
     const high = Math.max(...temperatures);
     // console.log(`Low: ${low}; High: ${high}`);
-    returnData =  
+    returnData =
     {
         low: Math.round(low),
         high: Math.round(high),
