@@ -232,6 +232,7 @@ form {
 
 label {
     font-weight: bold;
+    line-height: 1.5rem;
 }
 
 form label,
@@ -241,7 +242,7 @@ fieldset,
 button {
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 input[type="text"],
@@ -258,7 +259,7 @@ textarea {
 
 label:has(input:required)::before,
 .required::before {
-    content: "*";
+    content: "* ";
     font-size: 1.2rem;
     color: #8b0000;
 }
