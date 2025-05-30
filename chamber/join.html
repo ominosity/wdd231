@@ -46,7 +46,72 @@
     </header>
     <main>
         <h1>Join</h1>
+        <div id="form-page">
+            <section>
+                <h2>Register for Chamber of Commerce Membership</h2>
+                <form id="join-form" method="get" action="thankyou.html">
+                    <p>Please answer the following questions to apply for membership in the Albany, Oregon Chamber of
+                        Commerce. Questions with a red <span class='required'></span> are required.</p>
+                    <label>Your first name
+                        <input type="text" id="fname" name="fname" autocomplete="given-name"
+                            title="Your first (given) name" required>
+                    </label>
+                    <label>Your last name
+                        <input type="text" id="lname" name="lname" autocomplete="family-name"
+                            title="Your last (family) name" required>
+                    </label>
+                    <label>Your title at the organization
+                        <input type="text" id="title" name="title" autocomplete="organization-title"
+                            title="Your title at the organization. Titles must be at least 8 characters long and consist of only letters, spaces, and hyphens (-)."
+                            pattern="[A-Za-z\- ]{8,}">
+                    </label>
+                    <label>Your email address
+                        <input type="email" id="email" name="email" autocomplete="email" title="Your email address"
+                            placeholder="example@example.com" required>
+                    </label>
+                    <label>Your mobile phone number
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" title="Your mobile phone number"
+                            required>
+                    </label>
+                    <label>Business or organization name
+                        <input type="text" id="organization" name="organization" autocomplete="organization"
+                            title="The name of the business or organization you represent" required>
+                    </label>
+                    <fieldset>
+                        <legend>Membership level</legend>
+                        <label>
+                            <input type="radio" id="np" name="level" value="np"
+                                title="NP Membership for non-profit organizations">
+                            Non-profit
+                        </label>
+                        <label>
+                            <input type="radio" id="bronze" name="level" value="bronze" title="Bronze membership">
+                            Bronze
+                        </label>
+                        <label>
+                            <input type="radio" id="silver" name="level" value="silver" title="Silver membership">
+                            Silver
+                        </label>
+                        <label>
+                            <input type="radio" id="gold" name="level" value="gold" title="Gold membership">
+                            Gold
+                        </label>
+                    </fieldset>
+                    <label>
+                        Description of organization
+                        <textarea name="description" title="Please describe your organization" rows="10"></textarea>
+                    </label>
+                    <input type="hidden" name="timestamp" value="">
 
+                    <button type="submit">Apply to Join!</button>
+                </form>
+            </section>
+            <section>
+                <div>
+                    <h2>Membership Levels</h2>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div id="contact">

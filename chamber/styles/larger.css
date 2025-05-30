@@ -54,6 +54,12 @@
 
     }
 
+    #form-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
     section h2 {
         text-align: left;
     }
