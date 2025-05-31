@@ -23,6 +23,7 @@ const cardTemplate = (data) => {
     data.forEach((member) => {
         /* Create the elements */
         const section = document.createElement('section');
+        const level = document.createElement('div');
         const link = document.createElement('a');
         const figure = document.createElement('figure');
         const image = document.createElement('img');
@@ -32,6 +33,8 @@ const cardTemplate = (data) => {
         const visibleLink = document.createElement('a');
 
         /* Set up the elements with the data */
+        level.textContent = member.membership_level;
+        level.setAttribute('class', `${member.membership_level.toLowerCase()} badge`);
         link.setAttribute('href', member.url);
         caption.textContent = member.name;
         image.setAttribute('src', member.logo_url);
@@ -48,6 +51,7 @@ const cardTemplate = (data) => {
         figure.appendChild(image);
         figure.appendChild(caption);
         link.appendChild(figure);
+        section.appendChild(level);
         section.appendChild(link);
         section.appendChild(address);
         section.appendChild(phone);

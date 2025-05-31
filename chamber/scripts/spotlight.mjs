@@ -26,6 +26,7 @@ const cardTemplate = (data) => {
 
         /* Create the elements */
         const card = document.createElement('div');
+        const badge = document.createElement('div');
         const name = document.createElement('h3');
         const contactBox = document.createElement('div');
         const image = document.createElement('img');
@@ -35,7 +36,9 @@ const cardTemplate = (data) => {
         
         
         /* Set up the elements with the data */
-        card.setAttribute('id', 'member-card')
+        card.setAttribute('id', 'member-card');
+        badge.setAttribute('class', `${member.membership_level.toLowerCase()} badge`);
+        badge.textContent = member.membership_level;
         name.textContent = member.name;
         contactBox.setAttribute('class', 'contact-box');
         image.setAttribute('src', member.logo_url);
@@ -46,6 +49,7 @@ const cardTemplate = (data) => {
         url.innerHTML = `<span class="bold">URL:</span> <a href="${member.url}" target="_blank">${member.url}</a>`;
      
         /* Add the elements to the fragment */
+        card.appendChild(badge);
         card.appendChild(name);
         card.appendChild(contactBox);
         contactBox.appendChild(image);

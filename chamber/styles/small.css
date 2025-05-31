@@ -330,6 +330,35 @@ fieldset {
     }
 }
 
+/* Membership level colors */
+.gold {
+    background: linear-gradient(20deg, #ffd700, white 50%, #ffd700);
+    box-shadow: 5px 5px 10px #806c00;
+}
+
+.np {
+    background: linear-gradient(20deg, var(--primary-color), white 50%, var(--primary-color));
+    box-shadow: 5px 5px 10px var(--primary-color);
+}
+
+.bronze {
+    background: linear-gradient(20deg, #cd8032, white 50%, #cd8032);
+    box-shadow: 5px 5px 10px #674019;
+}
+
+.silver {
+    background: linear-gradient(20deg, #c0c0c0, white 50%, #c0c0c0);
+    box-shadow: 5px 5px 10px #404040;
+}
+
+.badge {
+    padding: 5px 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
 /* Footer styles */
 footer {
     padding: var(--standard-spacing);
@@ -379,47 +408,48 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: var(--standard-spacing);
     font-size: .9rem;
-}
 
-.cards section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--standard-spacing);
-    border: 3px solid var(--primary-color);
-    border-radius: 20px;
-    background-color: var(--white-background-color);
-    box-shadow: 5px 5px 10px var(--text-color);
-}
+    & section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--standard-spacing);
+        border: 3px solid var(--primary-color);
+        border-radius: 20px;
+        background-color: var(--white-background-color);
+        box-shadow: 5px 5px 10px var(--text-color);
+        position: relative;
 
-.cards section p {
-    text-align: center;
-}
+        & p {
+            text-align: center;
+        }
 
-.cards section a {
-    color: var(--text-color);
-    text-decoration: none;
-    cursor: pointer;
-}
+        & a {
+            color: var(--text-color);
+            text-decoration: none;
+            cursor: pointer;
 
-.cards section:hover {
-    border-color: var(--accent-color);
-}
+            &:nth-of-type(2) {
+                text-decoration: underline;
 
-.cards section a:nth-of-type(2) {
-    text-decoration: underline;
-}
+                &:hover {
+                    color: var(--accent-color);
+                }
+            }
+        }
 
-.cards section a:nth-of-type(2):hover {
-    color: var(--accent-color);
-}
+        &:hover {
+            border-color: var(--accent-color);
+        }
 
-.cards section figure {
-    text-align: center;
-}
+        & figure {
+            text-align: center;
 
-.cards section figure img {
-    max-width: 200px;
+            & img {
+                max-width: 200px;
+            }
+        }
+    }
 }
 
 /* Directory grid styles */
@@ -428,38 +458,38 @@ footer {
     flex-direction: column;
     max-width: 1100px;
     margin: 0 auto;
+
+    & section {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        align-items: center;
+        min-height: 44px;
+        padding: var(--standard-spacing);
+        text-align: center;
+
+        & div {
+            padding-left: var(--standard-spacing);
+            padding-right: var(--standard-spacing);
+        }
+
+        &:nth-of-type(even) {
+            background-color: var(--secondary-color);
+
+            & a:hover {
+                color: var(--accent-color);
+            }
+        }
+
+        &a {
+            color: var(--text-color);
+
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
 }
 
-.list section {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
-    align-items: center;
-    min-height: 44px;
-    padding: var(--standard-spacing);
-    text-align: center;
-}
-
-.list section div {
-    padding-left: var(--standard-spacing);
-    padding-right: var(--standard-spacing);
-}
-
-.list section:nth-of-type(even) {
-    background-color: var(--secondary-color);
-}
-
-.list section a {
-    color: var(--text-color);
-}
-
-.list section a:hover {
-    color: var(--accent-color);
-
-}
-
-.list section:nth-of-type(even) a:hover {
-    color: var(--accent-color);
-}
 
 /********************
 /* Homepage styles **
@@ -500,6 +530,7 @@ footer {
 }
 
 #member-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 10px 0;
@@ -548,7 +579,7 @@ footer {
 }
 
 .membership-levels {
-    margin: 10px 20px ;
+    margin: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -562,26 +593,6 @@ footer {
     & button {
         font-size: 1rem;
         box-shadow: none;
-    }
-
-    &#np-card {
-        background: linear-gradient(20deg, var(--primary-color), white 50%, var(--primary-color));
-        box-shadow: 5px 5px 10px var(--primary-color);
-    }
-    
-    &#bronze-card {
-        background: linear-gradient(20deg, #cd8032, white 50%, #cd8032);
-        box-shadow: 5px 5px 10px #674019;
-    }
-    
-    &#silver-card {
-        background: linear-gradient(20deg, #c0c0c0, white 50%, #c0c0c0);
-        box-shadow: 5px 5px 10px #404040;
-    }
-    
-    &#gold-card {
-        background: linear-gradient(20deg, #ffd700, white 50%, #ffd700);
-        box-shadow: 5px 5px 10px #806c00;
     }
 }
 
@@ -605,6 +616,7 @@ footer {
         opacity: 1;
     }
 }
+
 /**************************
 ** Thank You Page styles **
 **************************/
