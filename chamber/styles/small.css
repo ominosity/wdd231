@@ -227,9 +227,6 @@ dialog {
     padding: 0 0 10px 0;
     border: none;
     border-radius: var(--standard-spacing);
-    transition: display .5s allow-discrete,
-        overlay .5s allow-discrete;
-    animation: close 1s forwards;
 }
 
 dialog[open] {
