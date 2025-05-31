@@ -227,18 +227,18 @@ dialog {
     padding: 0 0 10px 0;
     border: none;
     border-radius: var(--standard-spacing);
+}
 
-    & h2 {
-        text-align: center;
-    }
+dialog h2 {
+    text-align: center;
+}
 
-    & p {
-        padding: 10px;
-    }
+dialog p {
+    padding: 10px;
+}
 
-    & li {
-        margin-bottom: 10px;
-    }
+dialog li {
+    margin-bottom: 10px;
 }
 
 dialog::backdrop {
@@ -253,12 +253,13 @@ form {
     /* border: 3px double var(--primary-color); */
     border-radius: var(--standard-spacing);
     /* box-shadow: 2px 2px 5px var(--primary-color); */
-
-    & p {
-        font-size: .9rem;
-        margin-bottom: var(--standard-spacing);
-    }
 }
+
+form p {
+    font-size: .9rem;
+    margin-bottom: var(--standard-spacing);
+}
+
 
 label {
     font-weight: bold;
@@ -315,20 +316,21 @@ fieldset {
     padding-left: 0px;
     margin-bottom: 0px;
     font-weight: bold;
-
-    & label {
-        display: flex;
-        grid-gap: 5px;
-        align-items: center;
-        font-weight: normal;
-
-        & input {
-            width: 44px;
-            height: 44px;
-            margin: 0;
-        }
-    }
 }
+
+fieldset label {
+    display: flex;
+    grid-gap: 5px;
+    align-items: center;
+    font-weight: normal;
+}
+
+fieldset label input {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+}
+
 
 /* Membership level colors */
 .gold {
@@ -367,11 +369,11 @@ footer {
 
 #social-media {
     text-align: center;
+}
 
-    & img {
-        width: 75px;
-        height: 75px;
-    }
+#social-media img {
+    width: 75px;
+    height: 75px;
 }
 
 /**************************
@@ -408,48 +410,48 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: var(--standard-spacing);
     font-size: .9rem;
+}
 
-    & section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: var(--standard-spacing);
-        border: 3px solid var(--primary-color);
-        border-radius: 20px;
-        background-color: var(--white-background-color);
-        box-shadow: 5px 5px 10px var(--text-color);
-        position: relative;
+.cards section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--standard-spacing);
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--white-background-color);
+    box-shadow: 5px 5px 10px var(--text-color);
+    position: relative;
+}
 
-        & p {
-            text-align: center;
-        }
+.cards section p {
+    text-align: center;
+}
 
-        & a {
-            color: var(--text-color);
-            text-decoration: none;
-            cursor: pointer;
+.cards section a {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
 
-            &:nth-of-type(2) {
-                text-decoration: underline;
+.cards section a:nth-of-type(2) {
+    text-decoration: underline;
+}
 
-                &:hover {
-                    color: var(--accent-color);
-                }
-            }
-        }
+.cards section a:nth-of-type(2):hover {
+    color: var(--accent-color);
+}
 
-        &:hover {
-            border-color: var(--accent-color);
-        }
+.cards section:hover {
+    border-color: var(--accent-color);
+}
 
-        & figure {
-            text-align: center;
+.cards section figure {
+    text-align: center;
+}
 
-            & img {
-                max-width: 200px;
-            }
-        }
-    }
+.cards section figure img {
+    max-width: 200px;
 }
 
 /* Directory grid styles */
@@ -458,38 +460,37 @@ footer {
     flex-direction: column;
     max-width: 1100px;
     margin: 0 auto;
-
-    & section {
-        display: grid;
-        grid-template-rows: 1fr 2fr 1fr 1fr;
-        align-items: center;
-        min-height: 44px;
-        padding: var(--standard-spacing);
-        text-align: center;
-
-        & div {
-            padding-left: var(--standard-spacing);
-            padding-right: var(--standard-spacing);
-        }
-
-        &:nth-of-type(even) {
-            background-color: var(--secondary-color);
-
-            & a:hover {
-                color: var(--accent-color);
-            }
-        }
-
-        &a {
-            color: var(--text-color);
-
-            &:hover {
-                color: var(--accent-color);
-            }
-        }
-    }
 }
 
+.list section {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    min-height: 44px;
+    padding: var(--standard-spacing);
+    text-align: center;
+}
+
+.list section div {
+    padding-left: var(--standard-spacing);
+    padding-right: var(--standard-spacing);
+}
+
+.list section:nth-of-type(even) {
+    background-color: var(--secondary-color);
+}
+
+.list section:nth-of-type(even) a:hover {
+    color: var(--accent-color);
+}
+
+.list section a {
+    color: var(--text-color);
+}
+
+.list section a:hover {
+    color: var(--accent-color);
+}
 
 /********************
 /* Homepage styles **
@@ -589,20 +590,21 @@ footer {
     border-radius: 40px 10px;
     font-weight: bold;
     cursor: pointer;
-
-    & button {
-        font-size: 1rem;
-        box-shadow: none;
-    }
 }
+
+.membership-levels button {
+    font-size: 1rem;
+    box-shadow: none;
+}
+
 
 .membership-levels {
     animation: float-in 1s ease-in-out 0s 1 normal none;
     transition: scale 250ms ease 0s;
+}
 
-    &:hover {
-        scale: 103%;
-    }
+.membership-levels:hover {
+    scale: 103%;
 }
 
 @keyframes float-in {
@@ -622,16 +624,16 @@ footer {
 **************************/
 #thank-you {
     padding: 20px;
+}
 
-    & p {
-        margin: 10px;
-    }
+#thank-you p {
+    margin: 10px;
+}
 
-    & h3 {
-        padding: 10px;
-    }
+#thank-you h3 {
+    padding: 10px;
+}
 
-    & ul li {
-        margin-bottom: 10px;
-    }
+#thank-you ul li {
+    margin-bottom: 10px;
 }

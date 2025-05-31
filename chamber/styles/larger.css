@@ -78,14 +78,12 @@
         font-size: 1rem;
     }
 
-
-
     dialog {
         max-width: 75%;
+    }
 
-        & h2 {
-            text-align: center;
-        }
+    dialog h2 {
+        text-align: center;
     }
 
     footer {

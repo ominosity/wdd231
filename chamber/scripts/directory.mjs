@@ -36,6 +36,7 @@ const cardTemplate = (data) => {
         level.textContent = member.membership_level;
         level.setAttribute('class', `${member.membership_level.toLowerCase()} badge`);
         link.setAttribute('href', member.url);
+        link.setAttribute('target', '_blank');
         caption.textContent = member.name;
         image.setAttribute('src', member.logo_url);
         image.setAttribute('target', '_blank');
