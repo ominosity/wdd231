@@ -39,6 +39,10 @@ h6 {
     font-weight: var(--header-font-weight);
 }
 
+p {
+    line-height: 1.5rem;
+}
+
 main {
     padding: var(--standard-spacing);
 }
@@ -216,13 +220,39 @@ nav a.active {
     cursor: auto;
 }
 
+/* Basic dialog setup */
+dialog {
+    align-self: center;
+    justify-self: center;
+    padding: 0 0 10px 0;
+    border: none;
+    border-radius: var(--standard-spacing);
+
+    & h2 {
+        text-align: center;
+    }
+
+    & p {
+        padding: 10px;
+    }
+
+    & li {
+        margin-bottom: 10px;
+    }
+}
+
+dialog::backdrop {
+    flex: 1;
+    background-color: rgb(10, 10, 10, .5)
+}
+
 /* Basic form styles */
 form {
     margin: var(--standard-spacing);
-    padding: var(--standard-spacing);
-    border: 3px double var(--primary-color);
+    padding: calc(var(--standard-spacing)* 2);
+    /* border: 3px double var(--primary-color); */
     border-radius: var(--standard-spacing);
-    box-shadow: 2px 2px 5px var(--primary-color);
+    /* box-shadow: 2px 2px 5px var(--primary-color); */
 
     & p {
         font-size: .9rem;
@@ -239,22 +269,21 @@ form label,
 form label input,
 textarea,
 fieldset,
-button {
-    display: block;
+button[type="submit"] {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 textarea {
-    min-height: 44px;
     padding: 10px;
     color: #494949;
     border-radius: var(--standard-spacing);
-    box-shadow: 2px 2px 5px var(--primary-color);
     line-height: 1.4rem;
+    border: 1px solid var(--primary-color);
+    box-shadow: 2px 2px 5px var(--primary-color);
 }
 
 label:has(input:required)::before,
@@ -276,6 +305,8 @@ button {
     font-weight: bold;
     font-size: 1.9rem;
     border-radius: var(--standard-spacing);
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
 }
 
 /* Radio buttons in a fieldset */
@@ -307,12 +338,11 @@ footer {
 
 #social-media {
     text-align: center;
-}
 
-#social-media img {
-    width: 75px;
-    height: 75px;
-
+    & img {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 /**************************
@@ -506,4 +536,70 @@ footer {
 #member-card .contact-info p {
     line-height: 1.5rem;
     overflow-wrap: anywhere;
+}
+
+/*********************
+** Join Page styles **
+*********************/
+#membership-options {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+}
+
+.membership-levels {
+    margin: 10px 20px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 44px;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 40px 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+    & button {
+        font-size: 1rem;
+        box-shadow: none;
+    }
+
+    &#np-card {
+        background: linear-gradient(20deg, var(--primary-color), white 50%, var(--primary-color));
+        box-shadow: 5px 5px 10px var(--primary-color);
+    }
+    
+    &#bronze-card {
+        background: linear-gradient(20deg, #cd8032, white 50%, #cd8032);
+        box-shadow: 5px 5px 10px #674019;
+    }
+    
+    &#silver-card {
+        background: linear-gradient(20deg, #c0c0c0, white 50%, #c0c0c0);
+        box-shadow: 5px 5px 10px #404040;
+    }
+    
+    &#gold-card {
+        background: linear-gradient(20deg, #ffd700, white 50%, #ffd700);
+        box-shadow: 5px 5px 10px #806c00;
+    }
+}
+
+/**************************
+** Thank You Page styles **
+**************************/
+#thank-you {
+    padding: 20px;
+
+    & p {
+        margin: 10px;
+    }
+
+    & h3 {
+        padding: 10px;
+    }
+
+    & ul li {
+        margin-bottom: 10px;
+    }
 }

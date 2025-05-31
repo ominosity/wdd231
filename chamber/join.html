@@ -24,6 +24,7 @@
 
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -101,15 +102,68 @@
                         Description of organization
                         <textarea name="description" title="Please describe your organization" rows="10"></textarea>
                     </label>
-                    <input type="hidden" name="timestamp" value="">
+                    <input type="hidden" name="timestamp" id="timestamp" value="">
 
                     <button type="submit">Apply to Join!</button>
                 </form>
             </section>
-            <section>
-                <div>
-                    <h2>Membership Levels</h2>
+            <section id="membership-options">
+                <h2>Membership Levels</h2>
+                <div class="membership-levels" id="np-card" title="Learn more about non-profit memberships">Non-Profit
+                    <button id="np-button">Learn More</button>
                 </div>
+                <div class="membership-levels" id="bronze-card">Bronze
+                    <button id="bronze-button">Learn More</button>
+                </div>
+                <div class="membership-levels" id="silver-card">Silver
+                    <button id="silver-button">Learn More</button>
+                </div>
+                <div class="membership-levels" id="gold-card">Gold
+                    <button id="gold-button">Learn More</button>
+                </div>
+
+                <!-- Dialogs opened with above elements -->
+                <dialog id="np-dialog" closedby="any">
+                    <h2>Non-Profit Membership Level</h2>
+                    <p>Any non-profits who provide proof of their 501(c)(3) status are eligible for a no-cost membership
+                        to the Albany, Oregon Chamber of Commerce. Non-Profit membership includes the following
+                        benefits:</p>
+                    <ul>
+                        <li>Inclusion in the Chamber of Commerce directory</li>
+                        <li>Mention in the "Non-profits of Albany" section of the annual newsletter</li>
+                        <li>Subscription to the monthly newsletter</li>
+                        <li>30% discount on ad space purchased in the "Buy Local" mailer pack</li>
+                        <li>Invitation to all Chamber of Commerce events</li>
+                    </ul>
+                </dialog>
+
+                <dialog id="bronze-dialog" closedby="any">
+                    <h2>Bronze Membership Level - $340/year</h2>
+                    <p>Any business or organization located in Albany, Oregon can become a Bronze member of the Chamber
+                        of Commerce for just $340 per year. Membership includes the following benefits: </p>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </dialog>
+
+                <dialog id="silver-dialog" closedby="any">
+                    <h2>Silver Membership Level $745/year</h2>
+                    <p>Any business or organization located in Albany, Oregon can become a Silver member of the Chamber
+                        of Commerce for just $745 per year. Membership includes the following benefits: </p>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </dialog>
+
+                <dialog id="gold-dialog" closedby="any">
+                    <h2>Gold Membership Level - $2,595/year</h2>
+                    <p>Any business or organization located in Albany, Oregon can become a Gold member of the Chamber of
+                        Commerce for just $2,595 per year. Membership includes the following benefits: </p>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </dialog>
+
             </section>
         </div>
     </main>
