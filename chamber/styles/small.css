@@ -587,6 +587,11 @@ footer {
 
 .membership-levels {
     animation: float-in 1.5s ease-in-out 0s 1 normal none;
+    transition: scale 250ms ease 0s;
+
+    &:hover {
+        scale: 103%;
+    }
 }
 
 @keyframes float-in {
