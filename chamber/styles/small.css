@@ -16,9 +16,24 @@
     --testing-border: 1px solid red;
 }
 
+/* Reset */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: var(--body-font);
+    font-weight: var(--body-font-weight);
 }
 
 /* Overall page styles for every page */
@@ -266,7 +281,16 @@ dialog p {
 }
 
 dialog li {
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 50px;
+    padding-left: 20px;
+    &::marker {
+        content: '✔️';
+    }
+}
+
+li {
+    margin: 10px 10px 10px 50px;
+    padding-left: 20px;
 }
 
 dialog::backdrop {
