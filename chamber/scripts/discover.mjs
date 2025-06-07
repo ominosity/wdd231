@@ -31,6 +31,7 @@ const cards = (data) => {
         picture.setAttribute('alt', place.name);
         picture.setAttribute('loading', 'lazy');
         picture.setAttribute('width', 300);
+        picture.setAttribute('height', 200);
         description.textContent = place.description;
         address.textContent = place.address;
         link.setAttribute('href', place.moreInfo);
@@ -61,7 +62,7 @@ if (!lastVisit) {
     visitorMessageElement.textContent = 'Welcome! Let us know if you have any questions.';
     localStorage.setItem('last-visit', now.getTime());
 } else {
-    const daysSince = Math.round((now - lastVisit) / (1000 * 60 * 60 * 24)); 
+    const daysSince = Math.round((now - lastVisit) / (1000 * 60 * 60 * 24));
 
     if (daysSince < 1) {
         visitorMessageElement.textContent = 'Back so soon? Awesome!';
