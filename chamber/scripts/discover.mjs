@@ -3,6 +3,7 @@ const data = await getPlaces();
 
 /* Assign DOM elements to variables */
 const placesElement = document.querySelector('#places');
+const visitorMessageElement = document.querySelector('#visitor-message');
 
 const cards = (data) => {
     /* Clear any previous data */
@@ -28,6 +29,7 @@ const cards = (data) => {
         nameElement.textContent = place.name;
         picture.setAttribute('src', place.imageURL);
         picture.setAttribute('alt', place.name);
+        picture.setAttribute('loading', 'lazy');
         description.textContent = place.description;
         address.textContent = place.address;
         link.setAttribute('href', place.moreInfo);
@@ -50,3 +52,23 @@ const cards = (data) => {
 }
 
 cards(data);
+
+const now = new Date();
+const lastVisit = localStorage.getItem('last-visit');
+
+if (!lastVisit) {
+    visitorMessageElement.textContent = 'Welcome! Let us know if you have any questions.';
+    localStorage.setItem('last-visit', now.getTime());
+} else {
+    const daysSince = Math.round((now - lastVisit) / (1000 * 60 * 60 * 24)); 
+
+    if (daysSince < 1) {
+        visitorMessageElement.textContent = 'Back so soon? Awesome!';
+    } else if (daysSince == 1) {
+        visitorMessageElement.textContent = `You last visited ${daysSince} day ago`;
+    } else {
+        visitorMessageElement.textContent = `You last visited ${daysSince} days ago`;
+    }
+    localStorage.setItem('last-visit', now.getTime());
+}
+
