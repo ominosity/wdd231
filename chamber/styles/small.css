@@ -745,18 +745,18 @@ footer {
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    text-align: center;
     margin: var(--standard-spacing);
     padding-left: var(--standard-spacing);
     padding-right: var(--standard-spacing);
     min-height: 44px;
-    line-height: 44px;
     border: 1px solid var(--primary-color);
     border-radius: var(--standard-spacing);
     box-shadow: 4px 4px 8px #000000;
     cursor: pointer;
     color: #000000;
     background-color: rgb(240, 240, 240);
+    display: grid;
+    place-items: center;
 }
 
 #places section a:hover {
