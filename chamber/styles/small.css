@@ -283,10 +283,10 @@ dialog p {
 dialog li {
     margin: 10px 10px 10px 50px;
     padding-left: 20px;
+}
 
-    &::marker {
-        content: '✔️';
-    }
+dialog li::marker {
+    content: '✔️';
 }
 
 li {
@@ -712,7 +712,7 @@ footer {
         "description"
         "address"
         "button";
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr;
 }
 
 #places section h2 {
@@ -728,7 +728,7 @@ footer {
     margin: 0 auto;
     width: 300px;
     height: auto;
-} 
+}
 
 #places section p {
     grid-area: description;
