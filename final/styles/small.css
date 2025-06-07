@@ -198,5 +198,6 @@ section p {
     float: left;
     margin: var(--wide-spacing);
     border: 2px dotted var(--dark-text-color);
-    max-width: 563px;
+    max-width: 90%;
+    height: auto;
 }
