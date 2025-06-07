@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>align-items vs align-content</title>
+    <style>
+        body {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #888;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f5f5f5;
+        }
+
+        .item {
+            width: 60px;
+            height: 60px;
+            background: #4CAF50;
+            margin: 5px;
+            color: white;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .demo-title {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .align-items {
+            align-items: flex-start;
+            /* Try center, flex-end, stretch */
+        }
+
+        .align-content {
+            align-content: flex-start;
+            /* Try center, space-between, stretch */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="demo-title">align-items: flex-start</div>
+        <div class="box align-items">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="demo-title">align-content: flex-start</div>
+        <div class="box align-content">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

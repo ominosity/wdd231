@@ -94,17 +94,17 @@
     }
 }
 
-/* For the directory list-view on medium screens */
-@media screen and (width >=550px) {
-    .list section {
+/* For the discover page on mediume screens */
+@media screen and (width >= 1025px) {
+    #places {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr 2fr;
-        grid-template-rows: 1fr;
-        text-align: left;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        font-size: .8rem;
     }
 
-    .list section div {
-        min-width: 0;
-        overflow-wrap: anywhere;
+    #places section {
+        align-content: space-between;
     }
 }
+

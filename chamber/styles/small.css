@@ -130,7 +130,7 @@ section h2 {
     text-align: center;
     padding: var(--standard-spacing);
     font-weight: var(--body-font-weight);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .bold {
@@ -283,6 +283,7 @@ dialog p {
 dialog li {
     margin: 10px 10px 10px 50px;
     padding-left: 20px;
+
     &::marker {
         content: '✔️';
     }
@@ -699,3 +700,51 @@ footer {
 #thank-you ul li {
     margin-bottom: 10px;
 }
+
+/**************************
+** Discover Page styles **
+**************************/
+#places section {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "picture"
+        "description"
+        "address"
+        "button";
+    grid-template-columns: 1fr;    
+}
+
+#places section h2 {
+    grid-area: name;
+}
+
+#places section figure {
+    grid-area: picture;
+}
+
+#places section figure img {
+    display: block;
+    margin: 0 auto;
+} 
+
+#places section p {
+    grid-area: description;
+    margin: var(--standard-spacing);
+}
+
+#places section address {
+    grid-area: address;
+    margin: var(--standard-spacing);
+}
+
+#places section a {
+    grid-area: button;
+    margin: var(--standard-spacing);
+}
+
+#places section a button {
+    width: 100%;
+    font-size: 1rem;
+}
+

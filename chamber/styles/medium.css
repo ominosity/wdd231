@@ -1,0 +1,52 @@
+/* For the discover page on mediume screens */
+@media screen and (width > 640px) {
+    #places section {
+        grid-template-areas:
+            "name name"
+            "picture description"
+            "picture address"
+            "button button"
+        ;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+
+    #places section figure img {
+        width: 300px;
+        height: auto;
+        margin: var(--standard-spacing);
+    }
+
+    #places section figure img:hover {
+        box-shadow: 5px 5px 10px black;
+    }
+
+    #places section a button {
+        font-size: 1rem;
+    }
+
+    #places section a button:hover {
+        box-shadow: 4px 4px 8px var(--primary-color);
+    }
+
+    #places section a button:active {
+        box-shadow: 2px 2px 4px black inset;
+    }
+
+
+}
+
+/* For the directory list-view on medium screens */
+@media screen and (width >=550px) {
+    .list section {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        text-align: left;
+    }
+
+    .list section div {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}

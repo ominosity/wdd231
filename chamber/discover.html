@@ -16,6 +16,7 @@
     <meta property="og:url" content="https://ominosity.github.io/wdd231/chamber/discover.html">
 
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +25,8 @@
 
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/discover.mjs" type="module"></script>
+    
 </head>
 
 <body>
@@ -40,19 +43,27 @@
         <div id="x-icon" class="toggle">X</div>
         <nav id="navBar">
             <a href="index.html" target="_self">Home</a>
-            <a href="#" target="_self">Discover</a>
+            <a href="#" target="_self" class="active">Discover</a>
             <a href="directory.html" target="_self">Business Directory</a>
-            <a href="#" target="_self" class="active">Join</a>
+            <a href="join.html" target="_self">Join</a>
         </nav>
     </header>
     <main>
         <h1>Discover</h1>
-        <section>
-
-        </section>
-        <section>
-
-        </section>
+        <div id="places">
+            <!-- Section Template 
+                <section>
+                <h2>Historic Carousel &amp; Museum</h2>
+                <figure><img src="images/discover/carousel.webp" alt="Historic Carousel &amp; Museum"></figure>
+                <p>Since the early 2000s, this hand-carved carousel has been built, starting with a restored classic 1909 Dentzel
+                    Carousel Corporation mechanism. It currently features 41 animals with 52 total planned. The carousel is fun for
+                    the whole family, but not the only thing on display. There's also a carousel museum, party rooms, and a gift
+                    shop, which sells personally-signed copies of 'Caesar the No drama Llama' (yes, that stamp is a scaled copy of
+                    his hoofprint).</p>
+                <address>503 W 1st Ave, Albany, OR 97321</address><a href="https://albanycarousel.com/" target="_blank"><button>More
+                        Info</button></a>
+            </section> -->
+        </div>
     </main>
     <footer>
         <div id="contact">
