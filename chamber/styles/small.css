@@ -713,6 +713,7 @@ footer {
         "address"
         "button";
     grid-template-columns: 1fr;    
+    min-height: 640px;
 }
 
 #places section h2 {
