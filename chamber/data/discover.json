@@ -1,0 +1,52 @@
+{
+    "itemsOfInterest": [
+        {
+            "name" : "Historic Carousel & Museum",
+            "address" : "503 W 1st Ave, Albany, OR 97321",
+            "description" : "Since the early 2000s, this hand-carved carousel has been built, starting with a restored classic 1909 Dentzel Carousel Corporation mechanism. It currently features 41 animals with 52 total planned. The carousel is fun for the whole family, but not the only thing on display. There's also a carousel museum, party rooms, and a gift shop, which sells personally-signed copies of 'Caesar the No drama Llama' (yes, that stamp is a scaled copy of his hoofprint).",
+            "imageURL" : "discover/carousel.webp"
+        },
+        {
+            "name": "Talking Water Gardens",
+            "address": "577 Waverly Dr NE, Albany, OR 97321",
+            "description": "Used as a water treatment wetland since 2010, Talking Water Gardens mimics the cleansing and cooling processes that occur in nature to return treated waste water to the environment. In addition to cooling and aerating the water so it's safe to return to the Willamette, Talking Water Gardens features walking trails, waterfalls, wetland plants, and over 100 species of birds and waterfowl.",
+            "imageURL": "discover/talking-waters.webp"
+        },
+        {
+            "name": "Albany Regional Museum",
+            "address": "136 SE Lyon St S, Albany, OR 97231",
+            "description": "Renovated in 2023, the Albany Regional Museum showcases both permanent and rotating exhibits including thousands or artifacts and photographs. Diaramas portray historical businesses and the people that have worked in the various industries that have supported Albany in its 170-plus year history.",
+            "imageURL": "discover/albany-regional-museum.webp"
+        },
+        {
+            "name": "Monteith House",
+            "address": "518 Second Ave SW, Albany, OR 97321",
+            "description": "The Monteith House is the restored home of Albany founders Walter and Thomas Monteith. Completed in 1849, it not only served as the Monteith family home, but as a meeting place for religious, political, and other activities. The home is now operated by volunteers who offer tours and special events, including pioneer and ghost story-telling, music, and interactive pioneer activies like woodworking, doll making, baking biscuits, and making butter.",
+            "imageURL": "monteith-house.jpg"
+        },
+        {
+            "name": "",
+            "address": "",
+            "description": "",
+            "imageURL": ""
+        },
+        {
+            "name": "",
+            "address": "",
+            "description": "",
+            "imageURL": ""
+        },
+        {
+            "name": "",
+            "address": "",
+            "description": "",
+            "imageURL": ""
+        },
+        {
+            "name": "",
+            "address": "",
+            "description": "",
+            "imageURL": ""
+        }
+    ]
+}

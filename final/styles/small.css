@@ -1,0 +1,202 @@
+/* Variables */
+:root {
+    --header-font-family: "Edu SA Hand", cursive;
+    --header-font-weight: 700;
+    --body-font-family: "Asta Sans", sans-serif;
+    --body-font-weight: 400;
+
+    --background-color: #dbdbdb;
+    --primary-color: #00443d;
+    --secondary-color: #cdc392;
+    --highlight-color: #09bc8a;
+    /* --highlight-color: #74b3ce; */
+    /* --highlight-color: #508991; */
+
+
+    --dark-text-color: #2C2C2C;
+    --light-text-color: #f3f2f2;
+
+    --corners: 15px;
+    --spacing: 10px;
+    --wide-spacing: 20px;
+}
+
+/* Style resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+/* Overall Site Styles */
+body {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    line-height: 1.5rem;
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+footer {
+    padding: var(--spacing);
+}
+
+header span {
+    font-size: 1.8rem;
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    display: block;
+    padding: var(--wide-spacing);
+    line-height: 2.6rem;
+}
+
+header ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--highlight-color);
+    text-align: center;
+}
+
+header ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    padding: var(--spacing);
+    width: 100%;
+}
+
+header ul li a:hover {
+    /* background-color: var(--primary-color);
+    color: var(--light-text-color); */
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+}
+
+header ul li a:active {
+    box-shadow: 1px 1px 5px var(--primary-color) inset;
+}
+
+main {
+    max-width: 1200px;
+    padding: var(--spacing);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    grid-gap: var(--spacing);
+}
+
+main h1 {
+    margin: var(--spacing);
+    margin-bottom: var(--wide-spacing);
+}
+
+main ul {
+    margin: var(--spacing) 0;
+}
+
+main li::marker {
+    content: "🚶‍♂️‍➡️";
+    font-size: 1.3rem;
+}
+
+main li {
+    margin-left: 40px;
+    line-height: 1.7rem;
+    margin-right: var(--spacing);
+}
+
+section {
+    flex: 1;
+    background-color: var(--light-text-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 3px 3px 5px var(--primary-color);
+    border-radius: var(--corners);
+}
+
+section:hover {
+    box-shadow: 3px 3px 5px var(--highlight-color);
+}
+
+section h2 {
+    background-color: var(--secondary-color);
+    padding: var(--spacing);
+    border-top-left-radius: var(--corners);
+    border-top-right-radius: var(--corners);
+    border-bottom: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+section p {
+    padding: var(--spacing);
+}
+
+/* Siteplan styles */
+.swatch {
+    display: block;
+    height: 44px;
+    width: 44px;
+    border: 1px solid black;
+    float: left;
+    margin-right: var(--spacing);
+}
+
+.swatches li {
+    min-height: 44px;
+    margin-bottom: var(--spacing);
+    margin-right: var(--spacing);
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.background {
+    background-color: var(--background-color);
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+}
+
+.edu {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+#wireframes img {
+    height: auto;
+    float: left;
+    margin: var(--wide-spacing);
+    border: 2px dotted var(--dark-text-color);
+    max-width: 563px;
+}

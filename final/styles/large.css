@@ -1,0 +1,16 @@
+@media screen and (min-width: 600px) {
+    header ul {
+        flex-direction: row;
+        max-width: 400px;
+        margin: 0 0 0 auto;
+    }
+
+    header ul li {
+        flex: 1;
+        border: 1px solid var(--primary-color);
+    }
+
+    header ul li::marker {
+        content: "";
+    }
+}
