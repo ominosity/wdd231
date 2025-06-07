@@ -23,7 +23,6 @@ const cards = (data) => {
         const description = document.createElement('p');
         const address = document.createElement('address');
         const link = document.createElement('a');
-        const button = document.createElement('button');
 
         /* Modify the element attributes */
         nameElement.textContent = place.name;
@@ -37,11 +36,10 @@ const cards = (data) => {
         link.setAttribute('href', place.moreInfo);
         link.setAttribute('target', '_blank');
         link.setAttribute('alt', `Learn more about ${place.name}`);
-        button.textContent = `Learn more about ${place.name}`;
+        link.textContent = `Learn more about ${place.name}`;
 
         /* Add the elements to the fragment */
         figure.appendChild(picture);
-        link.appendChild(button);
         section.appendChild(nameElement);
         section.appendChild(figure);
         section.appendChild(description);

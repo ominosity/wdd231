@@ -742,13 +742,29 @@ footer {
 
 #places section a {
     grid-area: button;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
     margin: var(--standard-spacing);
+    padding-left: var(--standard-spacing);
+    padding-right: var(--standard-spacing);
+    min-height: 44px;
+    line-height: 44px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--standard-spacing);
+    box-shadow: 4px 4px 8px #000000;
+    cursor: pointer;
+    color: #000000;
+    background-color: rgb(240, 240, 240);
 }
 
-#places section a button {
-    width: 100%;
-    font-size: 1.2rem;
-    margin-top: 0;
+#places section a:hover {
+    box-shadow: 4px 4px 8px var(--accent-color);
+}
+
+#places section a:active {
+    box-shadow: 4px 4px 8px black inset;
 }
 
 h1 {
