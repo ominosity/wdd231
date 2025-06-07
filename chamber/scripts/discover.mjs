@@ -30,6 +30,7 @@ const cards = (data) => {
         picture.setAttribute('src', place.imageURL);
         picture.setAttribute('alt', place.name);
         picture.setAttribute('loading', 'lazy');
+        picture.setAttribute('width', 300);
         description.textContent = place.description;
         address.textContent = place.address;
         link.setAttribute('href', place.moreInfo);
