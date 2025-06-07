@@ -94,8 +94,8 @@
     }
 }
 
-/* For the discover page on mediume screens */
-@media screen and (width >= 1025px) {
+/* For the discover page on large screens */
+@media screen and (width >=1025px) {
     #places {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -105,6 +105,6 @@
 
     #places section {
         align-content: space-between;
+        min-height: 500px;
     }
 }
-
