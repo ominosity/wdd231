@@ -21,7 +21,8 @@
     }
 
     #places section a button {
-        font-size: 1rem;
+
+        min-height: 44px;
     }
 
     #places section a button:hover {

@@ -36,7 +36,8 @@ const cards = (data) => {
         address.textContent = place.address;
         link.setAttribute('href', place.moreInfo);
         link.setAttribute('target', '_blank');
-        button.textContent = 'More Info';
+        link.setAttribute('alt', `Learn more about ${place.name}`);
+        button.textContent = `Learn more about ${place.name}`;
 
         /* Add the elements to the fragment */
         figure.appendChild(picture);
