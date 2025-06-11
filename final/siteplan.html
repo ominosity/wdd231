@@ -20,19 +20,25 @@
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asta+Sans&family=Edu+SA+Hand:wght@700&display=swap"
         rel="stylesheet">
+
+    <script src="scripts/dates.mjs" type="module"></script>
 </head>
 
 <body>
     <header>
-        <span>Easy Hiking in the Central Willamette Valley</span>
+        <div class="logo-title">
+            <img src="images/logo.png" alt="Easy Hiking in the Central Wilametted Valley Logo" width="186" height="100">
+            <span>Easy Hiking in the Central Willamette Valley</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Hikes</a></li>
                 <li><a href="#">Review</a></li>
             </ul>
@@ -85,7 +91,9 @@
         </section>
     </main>
     <footer>
-        <p>Copyright, Richie</p>
+        <p>&copy;<span class="copyright-date"></span> 😺 Richard Burgener 😺 WDD231</p>
+        <p>Page last modified: <span class="modified-date"></span></p>
+        <a href="siteplan.html" target="_blank" id="siteplan">📄</a>
     </footer>
 </body>
 

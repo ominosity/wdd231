@@ -59,45 +59,68 @@ header,
 footer {
     background-color: var(--primary-color);
     color: var(--light-text-color);
+    position: relative;
 }
 
 footer {
     padding: var(--spacing);
 }
 
-header span {
+footer p {
+    text-align: center;
+    margin: 0 50px;
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: row;
     font-size: 1.8rem;
     font-family: var(--header-font-family);
     font-weight: var(--header-font-weight);
-    display: block;
-    padding: var(--wide-spacing);
-    line-height: 2.6rem;
+    align-items: center;
 }
 
-header ul {
+.logo-title span {
+    padding: var(--wide-spacing);
+    line-height: 2.6rem;
+    
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
     display: flex;
     flex-direction: column;
-    background-color: var(--highlight-color);
     text-align: center;
 }
 
-header ul li a {
-    display: block;
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: black;
-    padding: var(--spacing);
-    width: 100%;
+nav ul li {
+    border-top: 1px solid var(--background-color);
 }
 
-header ul li a:hover {
-    /* background-color: var(--primary-color);
-    color: var(--light-text-color); */
+nav a {
+    display: block;
+    background-color: var(--highlight-color);
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: var(--spacing);
+}
+
+nav a.active {
     background-color: var(--background-color);
+    cursor: default;
+}
+
+nav a:hover {
+    background-color: var(--background-color); 
     color: var(--dark-text-color);
 }
 
-header ul li a:active {
+nav a:active {
     box-shadow: 1px 1px 5px var(--primary-color) inset;
 }
 
@@ -112,7 +135,6 @@ main {
 
 main h1 {
     margin: var(--spacing);
-    margin-bottom: var(--wide-spacing);
 }
 
 main ul {
@@ -130,12 +152,16 @@ main li {
     margin-right: var(--spacing);
 }
 
-section {
+section, 
+#hero
+ {
     flex: 1;
     background-color: var(--light-text-color);
     border: 1px solid var(--primary-color);
     box-shadow: 3px 3px 5px var(--primary-color);
     border-radius: var(--corners);
+    display: flex;
+    flex-direction: column;
 }
 
 section:hover {
@@ -156,48 +182,28 @@ section p {
     padding: var(--spacing);
 }
 
-/* Siteplan styles */
-.swatch {
-    display: block;
+section img {
+    max-width: calc(100% - 20px);
+    height: auto;
+    margin: var(--spacing);
+    border-radius: var(--corners);
+    box-shadow: 3px 3px 5px var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+#siteplan {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-size: 44px;
     height: 44px;
     width: 44px;
-    border: 1px solid black;
-    float: left;
-    margin-right: var(--spacing);
+    text-decoration: none;
 }
 
-.swatches li {
-    min-height: 44px;
-    margin-bottom: var(--spacing);
-    margin-right: var(--spacing);
-}
 
-.primary {
-    background-color: var(--primary-color);
-}
-
-.secondary {
-    background-color: var(--secondary-color);
-}
-
-.background {
-    background-color: var(--background-color);
-}
-
-.highlight {
-    background-color: var(--highlight-color);
-}
-
-.edu {
-    font-family: var(--header-font-family);
-    font-weight: var(--header-font-weight);
-}
-
-#wireframes img {
-    height: auto;
-    float: left;
-    margin: var(--wide-spacing);
-    border: 2px dotted var(--dark-text-color);
-    max-width: 90%;
-    height: auto;
+/* Page-specific styles */
+#hero {
+    align-self: center;
+    max-width: 100%;
 }

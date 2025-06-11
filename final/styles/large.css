@@ -1,16 +1,30 @@
 @media screen and (min-width: 600px) {
-    header ul {
+    nav ul {
         flex-direction: row;
         max-width: 400px;
         margin: 0 0 0 auto;
     }
-
-    header ul li {
+    
+    nav ul li {
         flex: 1;
-        border: 1px solid var(--primary-color);
+        border-left: 1px solid var(--background-color);
     }
-
-    header ul li::marker {
+    
+    nav ul li:first-of-type,
+    nav ul li:first-of-type a {
+        border-top-left-radius: var(--spacing);
+    }
+    
+    nav ul li:last-of-type {
+        border-right: 1px solid var(--background-color);
+        border-top-right-radius: var(--spacing);
+    }
+    
+    nav ul li:last-of-type a {
+        border-top-right-radius: var(--spacing);
+    }
+    
+    nav ul li::marker {
         content: "";
     }
 }
