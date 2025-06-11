@@ -83,7 +83,7 @@ footer p {
 .logo-title span {
     padding: var(--wide-spacing);
     line-height: 2.6rem;
-    
+
 }
 
 nav {
@@ -116,7 +116,7 @@ nav a.active {
 }
 
 nav a:hover {
-    background-color: var(--background-color); 
+    background-color: var(--background-color);
     color: var(--dark-text-color);
 }
 
@@ -152,9 +152,10 @@ main li {
     margin-right: var(--spacing);
 }
 
-section, 
-#hero
- {
+section,
+#hero,
+#highlights img {
+    max-width: 100%;
     flex: 1;
     background-color: var(--light-text-color);
     border: 1px solid var(--primary-color);
@@ -191,6 +192,7 @@ section img {
     border: 1px solid var(--primary-color);
 }
 
+/* This is the link to the siteplan, not the plan itself */
 #siteplan {
     position: absolute;
     left: 0px;
@@ -201,9 +203,33 @@ section img {
     text-decoration: none;
 }
 
-
-/* Page-specific styles */
 #hero {
     align-self: center;
     max-width: 100%;
+}
+
+/* Homepage styles */
+#highlights {
+    display: flex;
+    flex-direction: column;
+    grid-gap: var(--spacing);
+}
+
+.picture-in-picture {
+    position: relative;
+    max-width: 500px;
+}
+
+#highlights .thumbnail-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-shadow: 3px 3px 5px var(--secondary-color);
+}
+
+#highlights .picture-in-picture .thumbnail-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    box-shadow: -3px 3px 5px var(--secondary-color);
 }
