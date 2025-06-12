@@ -4,27 +4,45 @@
         max-width: 400px;
         margin: 0 0 0 auto;
     }
-    
+
     nav ul li {
         flex: 1;
         border-left: 1px solid var(--background-color);
     }
-    
+
     nav ul li:first-of-type,
     nav ul li:first-of-type a {
         border-top-left-radius: var(--spacing);
     }
-    
+
     nav ul li:last-of-type {
         border-right: 1px solid var(--background-color);
         border-top-right-radius: var(--spacing);
     }
-    
+
     nav ul li:last-of-type a {
         border-top-right-radius: var(--spacing);
     }
-    
+
     nav ul li::marker {
         content: "";
+    }
+}
+
+@media screen and (width >=750px) {
+    #highlights {
+        display: grid;
+        grid-template-areas:
+            "picture-1 description-1"
+            "description-2 picture-2"
+        ;
+    }
+
+    #highlights .picture-in-picture:first-of-type {
+        grid-area: picture-1
+    }
+
+    #highlights section:first-of-type {
+        grid-area: description-1;
     }
 }

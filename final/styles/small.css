@@ -217,19 +217,28 @@ section img {
 
 .picture-in-picture {
     position: relative;
-    max-width: 500px;
+    align-self: center;
+}
+
+.background {
+    width: 100%;
+    height: auto;
 }
 
 #highlights .thumbnail-left {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 5px;
+    left: 5px;
     box-shadow: 3px 3px 5px var(--secondary-color);
+    width: 150px;
+    height: auto;
 }
 
 #highlights .picture-in-picture .thumbnail-right {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 5px;
+    right: 5px;
     box-shadow: -3px 3px 5px var(--secondary-color);
+    width: 150px;
+    height: auto;
 }
