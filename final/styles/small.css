@@ -83,7 +83,35 @@ footer p {
 .logo-title span {
     padding: var(--wide-spacing);
     line-height: 2.6rem;
+    margin-right: 50px;
+}
 
+/* Collapsible Hamburger Menu */
+#hamburger-icon,
+#x-icon {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+#hamburger-icon {
+    top: 10px;
+    right: 10px;
+}
+
+#x-icon {
+    top: 22px;
+    right: 2px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle.show {
+    display: block;
 }
 
 nav {
@@ -92,17 +120,25 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+nav ul.show {
+    max-height: 144px;
 }
 
 nav ul li {
+    flex: 1 1 auto;
     border-top: 1px solid var(--background-color);
+    display: flex;
+    text-align: center;
+    min-height: 44px;
 }
 
 nav a {
-    display: block;
+    flex: 1 1 auto;
     background-color: var(--highlight-color);
     color: black;
     text-decoration: none;

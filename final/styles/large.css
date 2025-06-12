@@ -1,7 +1,9 @@
 @media screen and (min-width: 600px) {
     nav ul {
+        display: flex;
         flex-direction: row;
         max-width: 400px;
+        max-height: fit-content;
         margin: 0 0 0 auto;
     }
 
@@ -26,6 +28,11 @@
 
     nav ul li::marker {
         content: "";
+    }
+
+    #x-icon,
+    #hamburger-icon {
+        display: none;
     }
 }
 
