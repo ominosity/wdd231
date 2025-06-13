@@ -237,6 +237,7 @@ section img {
     height: 44px;
     width: 44px;
     text-decoration: none;
+    color: var(--light-text-color);
 }
 
 #hero {
@@ -282,8 +283,9 @@ section img {
 /* Hiking page styles*/
 #hike-listing {
     display: grid;
-    grid-gap: var(--spacing);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: var(--wide-spacing);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: var(--spacing);
 }
 
 #hike-listing section {
@@ -294,4 +296,36 @@ section img {
 
 #hike-listing section h2 {
     text-align: left;
+}
+
+#hike-listing section h3 {
+    margin: var(--spacing);
+}
+
+#hike-listing a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+    text-decoration: none;
+}
+
+#hike-listing section a:first-of-type:hover {
+    text-decoration: underline;
+}
+
+#hike-listing section a:last-of-type {
+    border: 1px solid var(--primary-color);
+    margin: var(--spacing);
+    padding: var(--spacing);
+    border-radius: var(--corners);
+    background-image: linear-gradient(10deg, var(--secondary-color), white 50%, var(--secondary-color));
+    box-shadow: 2px 2px 5px var(--dark-text-color);
+    font-weight: bold;
+}
+
+#hike-listing section a:last-of-type:hover {
+    background: linear-gradient(170deg, var(--secondary-color), white 50%, var(--secondary-color));
+}
+
+#hike-listing section a:last-of-type:active {
+    box-shadow: 2px 2px 5px var(--dark-text-color) inset;
 }

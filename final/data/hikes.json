@@ -2,22 +2,11 @@
     {
         "name": "Waverly Lake Loop",
         "address": "3154 Pacific Blvd SE, Albany, OR 97321",
-        "lat": 44.6405285,
-        "lon": -123.0695374,
+        "lat": 44.6426850,
+        "lon": -123.0665314,
         "description": "Easy 0.7 mi paved loop around Waverly Lake—birding, paddle boats, family-friendly.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6405285,-123.0695374",
         "image_url": "images/trails/waverly-lake-loop.webp",
         "url": "https://www.outdoorproject.com/united-states/oregon/waverly-lake-loop"
-    },
-    {
-        "name": "Cox Creek Loop",
-        "address": "Bridge over Cox Creek at Old Salem Rd, Albany, OR",
-        "lat": 44.6405,
-        "lon": -123.0690,
-        "description": "0.65 mi down and back paved path along Cox Creek.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6405,-123.0690",
-        "image_url": "images/trails/cox-creek-loop.webp",
-        "url": "https://albanyoregon.gov/parks/facilities/trails"
     },
     {
         "name": "Periwinkle Creek Trail",
@@ -25,7 +14,6 @@
         "lat": 44.62167,
         "lon": -123.08139,
         "description": "0.87 mi paved trail along Periwinkle Creek—flat and stroller-friendly.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.62167,-123.08139",
         "image_url": "images/trails/periwinkle-creek-trail.webp",
         "url": "https://www.traillink.com/trail/periwinkle-creek-bike-path/"
     },
@@ -34,38 +22,34 @@
         "address": "3000 21st Ave SE, Albany, OR 97322",
         "lat": 44.6205,
         "lon": -123.0679,
-        "description": "0.95 mi loop around Lexington Park—playground, picnic tables.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6205,-123.0679",
-        "image_url": "",
+        "description": "0.95 mi loop around Lexington Park—playground, picnic tables. Park anywhere on the west, north, or east sides.",
+        "image_url": "images/trails/lexington-park-path.webp",
         "url": "https://albanyoregon.gov/parks/facilities/trails"
     },
     {
         "name": "Swanson Park Connector",
         "address": "705 Railroad St SE, Albany, OR 97321",
-        "lat": 44.6365,
-        "lon": -123.1059,
+        "lat": 44.632964897921234,
+        "lon": -123.10002320727442,
         "description": "0.35 mi paved connector near Amtrak/transit center—short urban stroll.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6365,-123.1059",
-        "image_url": "",
+        "image_url": "images/trails/swanson-park-connector.webp",
         "url": "https://albanyoregon.gov/parks/facilities/trails"
     },
     {
-        "name": "Village Green Trail",
+        "name": "Village Green Park",
         "address": "NE Conser St to NE Manchester St, Albany, OR",
-        "lat": 44.6500,
-        "lon": -123.0900,
-        "description": "0.6 mi paved loop in Village Green Park—multi-use path around playground and fields.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6500,-123.0900",
-        "image_url": "",
-        "url": "https://www.traillink.com/trail/village-green-trail/"
+        "lat": 44.59673775382932,
+        "lon": -123.23677287997198,
+        "description": "0.6 mi paved out and back in Village Green Park—multi-use path around playground and fields.",
+        "image_url": "images/trails/village-green-park.webp",
+        "url": "http://therighttrail.org/trails/village-green-park"
     },
     {
         "name": "Lyle Hatfield Path",
-        "address": "Riverbend Dr & Baldy View Ln (Springfield), OR",
-        "lat": 44.0500,
-        "lon": -123.0500,
+        "address": "South end of Baldy View Ln (Springfield), OR",
+        "lat": 44.08226144980744,
+        "lon": -123.02444942418734,
         "description": "0.6 mi paved/grass trail—quiet riverside path near the hospital.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.05,-123.05",
         "image_url": "images/trails/lyle-hatfield-path.webp",
         "url": "https://www.traillink.com/cityactivity/albany-or-walking-trails/"
     },
@@ -75,17 +59,15 @@
         "lat": 44.0750,
         "lon": -123.1050,
         "description": "0.1 mi former rail-trestle bridge converted to pedestrian walkway.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.0750,-123.1050",
         "image_url": "images/trails/armitage-bridge-trail.webp",
         "url": "https://www.traillink.com/cityactivity/albany-or-walking-trails/"
     },
     {
         "name": "Westmoreland Park Path",
         "address": "Fern Ridge Path connector, Eugene, OR",
-        "lat": 44.0500,
-        "lon": -123.1000,
+        "lat": 44.03460809977709,
+        "lon": -123.11386124652097,
         "description": "1 mi paved connector within Westmoreland Park.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.05,-123.10",
         "image_url": "images/trails/westmoreland-park-path.webp",
         "url": "https://www.alltrails.com/trail/us/oregon/westmoreland-park"
     },
@@ -95,7 +77,6 @@
         "lat": 44.56559,
         "lon": -123.31600,
         "description": "0.79 mi paved path from fairgrounds to Bald Hill Natural Area.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.56559,-123.31600",
         "image_url": "images/trails/midge-cramer-multi-use-path.webp",
         "url": "hhttps://www.traillink.com/trail/midge-cramer-multi-use-path/"
     },
@@ -105,7 +86,6 @@
         "lat": 45.14012,
         "lon": -123.29316,
         "description": "0.5 mi paved/out-and-back to a 90-ton glacial erratic—easy, scenic!",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=45.14012,-123.29316",
         "image_url": "images/trails/erratic-rock-trail.webp",
         "url": "https://www.alltrails.com/trail/us/oregon/erratic-rock-state-natural-site"
     },
@@ -115,7 +95,6 @@
         "lat": 44.6365,
         "lon": -123.1059,
         "description": "Short segment along Willamette River—pick < 1 mi for easy river views.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6365,-123.1059",
         "image_url": "images/trails/takena-landing-trail.webp",
         "url": "https://en.wikipedia.org/wiki/Takena_Landing"
     },
@@ -125,7 +104,6 @@
         "lat": 44.6400,
         "lon": -123.0700,
         "description": "Partial segment near Talking Water Gardens—dirt path under 1 mi.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6400,-123.0700",
         "image_url": "images/trails/simpson-park-trail.webp",
         "url": "https://www.oregonhikers.org/field_guide/Simpson_Park_Trail"
     },
@@ -135,7 +113,6 @@
         "lat": 44.6402,
         "lon": -123.0688,
         "description": "Gentle wetland loops—easy wildlife viewing; walk < 1 mi for a short nature break.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.6402,-123.0688",
         "image_url": "images/trails/talking-water-gardens-loop.webp",
         "url": "https://albanyoregon.gov/parks/facilities/trails"
     },
@@ -145,7 +122,6 @@
         "lat": 44.8776,
         "lon": -122.6556,
         "description": "1.0 mi out and back trip on Canyon Trail from the South Falls parking lot to the trail behind the 177 ft waterfall.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.8776,-122.6556",
         "image_url": "images/trails/south-falls.webp",
         "url": "https://www.oregonhikers.org/field_guide/South_Falls"
     },
@@ -155,8 +131,16 @@
         "lat": 44.4075,
         "lon": -123.3032,
         "description": "A scenic 0.9-mile loop through oak woodland and savanna with interpretive signs and wildlife viewing opportunities. Ideal for a quiet, educational walk.",
-        "map_url": "https://www.google.com/maps/search/?api=1&query=44.4075,-123.3032",
         "image_url": "images/trails/woodpecker-loop-trail.webp",
         "url": "https://www.fws.gov/refuge/william-l-finley/visit-us/trails"
+    },
+    {
+        "name": "Adair Park Dome Trail",
+        "address": "7299 NE Arnold Ave, Corvallis, OR 97330",
+        "lat": 44.67255030842806,
+        "lon": -123.21400744661418,
+        "description": "From the trailhead just inside the entrance to Adair park, this 0.42 mi hike takes you around raised area, through grasses and trees.",
+        "image_url": "images/trails/adair-park-dome.webp",
+        "url": "http://therighttrail.org/trails/adair-park-dome-loop-trail"
     }
 ]
