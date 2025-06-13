@@ -283,7 +283,7 @@ section img {
 /* Hiking page styles*/
 #hike-listing {
     display: grid;
-    grid-gap: var(--wide-spacing);
+    grid-gap: var(--spacing);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: var(--spacing);
 }

@@ -51,7 +51,7 @@
         "lon": -123.02444942418734,
         "description": "0.6 mi paved/grass trail—quiet riverside path near the hospital.",
         "image_url": "images/trails/lyle-hatfield-path.webp",
-        "url": "https://www.traillink.com/cityactivity/albany-or-walking-trails/"
+        "url": "https://www.traillink.com/trail/lyle-hatfield-path/"
     },
     {
         "name": "Armitage Bridge Trail",
@@ -60,7 +60,7 @@
         "lon": -123.1050,
         "description": "0.1 mi former rail-trestle bridge converted to pedestrian walkway.",
         "image_url": "images/trails/armitage-bridge-trail.webp",
-        "url": "https://www.traillink.com/cityactivity/albany-or-walking-trails/"
+        "url": "https://www.traillink.com/trail/armitage-bridge/"
     },
     {
         "name": "Westmoreland Park Path",
@@ -78,7 +78,7 @@
         "lon": -123.31600,
         "description": "0.79 mi paved path from fairgrounds to Bald Hill Natural Area.",
         "image_url": "images/trails/midge-cramer-multi-use-path.webp",
-        "url": "hhttps://www.traillink.com/trail/midge-cramer-multi-use-path/"
+        "url": "https://www.traillink.com/trail/midge-cramer-multi-use-path/"
     },
     {
         "name": "Erratic Rock Trail",
@@ -96,7 +96,7 @@
         "lon": -123.1059,
         "description": "Short segment along Willamette River—pick < 1 mi for easy river views.",
         "image_url": "images/trails/takena-landing-trail.webp",
-        "url": "https://en.wikipedia.org/wiki/Takena_Landing"
+        "url": "https://www.oregonhikers.org/field_guide/Takena_Landing_Hike"
     },
     {
         "name": "Simpson Park Trail (segment)",
