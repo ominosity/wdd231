@@ -24,12 +24,14 @@ const loadCards = () => {
         heading.textContent = hike.name;
         image.setAttribute('src', hike.image_url);
         image.setAttribute('alt', hike.name);
+        image.setAttribute('loading', 'lazy');
         description.textContent = hike.description;
         trailhead.textContent = `${hike.name} Trailhead`;
         address.textContent = `🗺️ ${hike.address}`;
         map.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${hike.lat}, ${hike.lon}`);
         map.setAttribute('target', '_blank');
         link.setAttribute('href', hike.url);
+        link.setAttribute('target', "_blank");
         link.textContent = `More Info About ${hike.name}`;
 
         /* Add elements to fragment */
