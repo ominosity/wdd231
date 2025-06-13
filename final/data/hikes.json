@@ -100,12 +100,12 @@
     },
     {
         "name": "Simpson Park Trail (segment)",
-        "address": "778 Waverly Dr NE, Albany, OR 97321",
-        "lat": 44.6400,
-        "lon": -123.0700,
+        "address": "725 Waverly Dr NE, Albany, OR 97321",
+        "lat": 44.64544076907856,
+        "lon": -123.07474480237762,
         "description": "Partial segment near Talking Water Gardens—dirt path under 1 mi.",
         "image_url": "images/trails/simpson-park-trail.webp",
-        "url": "https://www.oregonhikers.org/field_guide/Simpson_Park_Trail"
+        "url": "https://albanyoregon.gov/parks/facilities/trails"
     },
     {
         "name": "Talking Water Gardens Loop",
@@ -114,7 +114,7 @@
         "lon": -123.0688,
         "description": "Gentle wetland loops—easy wildlife viewing; walk < 1 mi for a short nature break.",
         "image_url": "images/trails/talking-water-gardens-loop.webp",
-        "url": "https://albanyoregon.gov/parks/facilities/trails"
+        "url": "https://albanyoregon.gov/pw/wastewater/twg"
     },
     {
         "name": "South Falls",
