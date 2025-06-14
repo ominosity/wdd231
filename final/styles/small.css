@@ -228,16 +228,26 @@ section img {
     border: 1px solid var(--primary-color);
 }
 
-/* This is the link to the siteplan, not the plan itself */
-#siteplan {
+/* These are links to the siteplan and video, not the plan or video themselves */
+#siteplan, 
+#video {
     position: absolute;
-    left: 0px;
-    bottom: 0px;
+    
     font-size: 44px;
     height: 44px;
     width: 44px;
     text-decoration: none;
     color: var(--light-text-color);
+}
+
+#siteplan {
+    left: 0px;
+    bottom: 0px;
+}
+
+#video {
+    right: 20px;
+    bottom: 5px;
 }
 
 #hero {
