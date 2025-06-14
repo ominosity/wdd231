@@ -280,7 +280,7 @@ section img {
     height: auto;
 }
 
-/* Hiking page styles*/
+/* Hike listing styles (used on hikes, review, and thank you pages) */
 .hike-listing {
     display: grid;
     grid-gap: var(--spacing);
@@ -312,8 +312,9 @@ section img {
     text-decoration: underline;
 }
 
-#trail-review button,
-.hike-listing section a:last-of-type {
+button,
+.hike-listing section a:last-of-type,
+.close-dialog {
     border: 1px solid var(--primary-color);
     margin: var(--spacing);
     padding: var(--spacing);
@@ -323,14 +324,56 @@ section img {
     font-weight: bold;
 }
 
-#trail-review button:hover,
-.hike-listing section a:last-of-type:hover {
+button:hover,
+.hike-listing section a:last-of-type:hover,
+.close-dialog:hover {
     background: linear-gradient(170deg, var(--secondary-color), white 50%, var(--secondary-color));
 }
 
-#trail-review button:active,
-.hike-listing section a:last-of-type:active {
+button:active,
+.hike-listing section a:last-of-type:active,
+.close-dialog:active {
     box-shadow: 2px 2px 5px var(--dark-text-color) inset;
+}
+
+.dialog-link {
+    cursor: pointer;
+}
+
+.dialog-link:hover {
+    box-shadow: 0px 0px 20px var(--primary-color);
+}
+
+.dialog-link:active {
+    box-shadow: none;
+}
+
+/* Modal display of hikes */
+dialog {
+    max-width: 430px;
+    width: 100%;
+    position: relative;
+    border-radius: var(--corners);
+    border-width: 1px;
+    box-shadow: 5px 5px 10px var(--primary-color);
+}
+
+dialog[open] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+    background-color: rgb(100,  100, 100, .8);
+}
+
+dialog a.close-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
 }
 
 /* Review page styles */
@@ -382,10 +425,6 @@ textarea {
     color: red;
 }
 
-span {
-    display: inline;
-}
-
 label:has(select:required) {
     display: block;
 }
@@ -407,4 +446,8 @@ label:has(select:required) {
 
 #all-reviews {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#hike-summary-placeholder {
+    visibility: hidden;
 }
