@@ -49,7 +49,7 @@ export default function makeCard(hike) {
     dialogDescription.textContent = hike.description;
     dialogTrailhead.textContent = `${hike.name} Trailhead`;
     dialogAddress.textContent = `🗺️ ${hike.address}`;
-    dialogMap.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${hike.lat}, ${hike.lon}`);
+    dialogMap.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${hike.lat},${hike.lon}`);
     dialogMap.setAttribute('target', '_blank');
     dialogLatLon.innerHTML = `<strong>Latitude: </strong>${hike.lat}<br><strong>Longitude: </strong>${hike.lon}`;
     dialogLink.setAttribute('href', hike.url);
