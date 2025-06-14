@@ -30,6 +30,7 @@ if (params.has('hike')) {
 
     reviewSummary.name = hike;
     /* Show the card section for the reviewed hike */
+    thisHikeCard.innerHTML = ''; // Clear the placeholder first
     const hikeData = data.find(item => item.name === hike);
     thisHikeCard.appendChild(makeCard(hikeData));
 }
