@@ -60,7 +60,8 @@
             <section>
                 <h2>Review a hike</h2>
                 <form id="trail-review" method="get" action="thank-you.html">
-                    <p>Please answer as many of the below prompts as you can. Questions prepended with a red <span class="required"> </span> are required.</p>
+                    <p>Please answer as many of the below prompts as you can. Questions prepended with a red <span
+                            class="required"> </span> are required.</p>
                     <label>
                         <span class="required"> </span>Which hike would you like to review?
                         <select id="hike" name="hike" required>
@@ -127,19 +128,32 @@
                         </label>
                     </fieldset>
                     <label>
-                        How would you describe the hike (in 200 characters or less)? 
-                    <textarea rows="4" id="description" name="description" maxlength="200"></textarea>
-                </label>
+                        How would you describe the hike (in 200 characters or less)?
+                        <textarea rows="4" id="description" name="description" maxlength="200"></textarea>
+                    </label>
                     <button>Submit my review</button>
                 </form>
             </section>
             <div id="hike-summary">
+                <section>
+                    <h2>Lexington Park Path</h2>
+                    <img src="images/trails/lexington-park-path.webp" alt="Lexington Park Path" loading="lazy">
+                    <p>0.95 mi loop around Lexington Park—playground, picnic tables. Park anywhere on the west, north,
+                        or east sides. </p>
+                    <h3>Lexington Park Path Trailhead</h3>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=44.6205, -123.0679" target="_blank">
+                        <address>🗺️ 3000 21st Ave SE, Albany, OR 97322</address>
+                    </a>
+                    <a href="https://albanyoregon.gov/parks/facilities/trails" target="_blank">More Info About
+                        Lexington Park
+                        Path</a>
+                </section>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy;<span class="copyright-date"></span> 😺 Richard Burgener 😺 WDD231</p>
-        <p>Page last modified: <span class="modified-date"></span></p>
+        <p>&copy;<span id="copyright-date"></span> 😺 Richard Burgener 😺 WDD231</p>
+        <p>Page last modified: <span id="modified-date"></span></p>
         <a href="siteplan.html" target="_blank" id="siteplan">📄</a>
     </footer>
 </body>

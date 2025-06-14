@@ -1,6 +1,6 @@
 /* All pages get dates in the footer */
-const copyrightElement = document.querySelector('.copyright-date');
-const modifiedDateElement = document.querySelector('.modified-date');
+const copyrightElement = document.querySelector('#copyright-date');
+const modifiedDateElement = document.querySelector('#modified-date');
 
 copyrightElement.textContent = getCurrentYear();
 modifiedDateElement.textContent = modifiedDate();
