@@ -33,7 +33,7 @@ export default function makeCard(hike) {
     description.textContent = hike.description;
     trailhead.textContent = `${hike.name} Trailhead`;
     address.textContent = `🗺️ ${hike.address}`;
-    map.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${hike.lat}, ${hike.lon}`);
+    map.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${hike.lat},${hike.lon}`);
     map.setAttribute('target', '_blank');
     link.setAttribute('href', hike.url);
     link.setAttribute('target', "_blank");
