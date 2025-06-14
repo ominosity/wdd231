@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hike Listing - Easy Hiking in the Central Willamette Valley</title>
+    <title>Hike Review - Easy Hiking in the Central Willamette Valley</title>
     <meta name="author" content="Richard Burgener">
     <meta name="description"
-        content="A page listing easy hikes available within the Central Willamette Valley, Oregon.">
+        content="A page to personally review easy hikes within the Central Willamette Valley, Oregon.">
 
     <link rel="icon" href="favicon.ico">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hike Listing - Easy Hiking in the Central Willamette Valley">
+    <meta property="og:title" content="Hike Review - Easy Hiking in the Central Willamette Valley">
     <meta property="og:description"
-        content="A page listing easy hikes available within the Central Willamette Valley, Oregon.">
+        content="A page to personally review easy hikes within the Central Willamette Valley, Oregon.">
     <meta property="og:image" content="https://ominosity.github.io/wdd231/final/images/open-graph-logo.jpg">
     <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://ominosity.github.io/wdd231/final/hikes.html">
+    <meta property="og:url" content="https://ominosity.github.io/wdd231/final/review.html">
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -28,13 +28,14 @@
 
     <script src="scripts/dates.mjs" type="module"></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/hikes.mjs" type="module"></script>
+    <script src="scripts/thank-you.mjs" type="module"></script>
 </head>
 
 <body>
     <header>
         <div class="logo-title">
-            <img src="images/logo.webp" alt="Easy Hiking in the Central Willamette Valley Logo" width="186" height="100">
+            <img src="images/logo.webp" alt="Easy Hiking in the Central Willamette Valley Logo" width="186"
+                height="100">
             <span>Easy Hiking in the Central Willamette Valley</span>
         </div>
         <div id="hamburger-icon" class="toggle show"><img src="images/hamburger.svg" alt="Hamburger icon"></div>
@@ -42,28 +43,31 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#" class="active">Hikes</a></li>
+                <li><a href="hikes.html">Hikes</a></li>
                 <li><a href="review.html">Review</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Hikes</h1>
+        <h1>Your Review</h1>
         <section>
-           <h2>About the hikes</h2>
-           <p>The hikes listed below have been chosen by their ease and location in the Central Willamette Valley. All hikes are a mile or less with low to moderate inclines (mostly low).</p>
+            <h2>Thank you</h2>
+            <p>Thank you so much for reviewing the <span id="hike-name"></span> hike. Your feedback greatly improves the value of these listings.</p>
         </section>
-        <div id="hike-listing" class="hike-listing">
-            <section>
-                <h2>South Falls</h2>
-                <img src="images/trails/south-falls.webp" alt="South Falls">
-                <p>1.0 mi out and back trip on Canyon Trail from the South Falls parking lot to the trail behind the 177 ft waterfall.</p>
-                <h3>Trailhead</h3>
-                <address>20024 Silver Falls Hwy SE, Sublimity, OR 97385</address>
-                <a href="https://www.google.com/maps/search/?api=1&query=44.8776,-122.6556" target="_blank">Map to South Falls</a>
-                <a href="https://www.oregonhikers.org/field_guide/South_Falls" target="_blank">More Info About South Falls</a>
+        <div class="hike-listing">
+            <section id="this-review" class="review">
+                <h2>This review</h2>
+                <h3>South Falls</h3>
+                <ul>
+                    <li><strong>Difficulty: </strong>easy</li>
+                    <li><strong>Scenery: </strong>beautiful</li>
+                    <li><strong>Would (will) you go again: </strong>definitely</li>
+                    <li><strong>Description: </strong>'twas Good</li>
+                </ul>
             </section>
+            <div id="this-hike"></div>
         </div>
+        <div id="all-reviews" class="hike-listing"></div>
     </main>
     <footer>
         <p>&copy;<span class="copyright-date"></span> 😺 Richard Burgener 😺 WDD231</p>

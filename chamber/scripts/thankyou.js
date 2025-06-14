@@ -4,7 +4,7 @@ const summary = document.querySelector('#application-summary');
 /* Get the returned parameters */
 const joinResults = new URLSearchParams(window.location.search);
 
-console.log(joinResults.toString());
+// console.log(joinResults.toString());
 
 /* Clear any existing summary */
 summary.innerHTML = "";

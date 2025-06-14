@@ -135,7 +135,7 @@ function getDaySummary(day, data) {
     let chosenDay = new Date();
     chosenDay.setDate(chosenDay.getDate() + day);
     // console.table(data.list);
-    console.log(`Day: ${day} Chosen Day: ${chosenDay.toLocaleDateString()}`);
+    // console.log(`Day: ${day} Chosen Day: ${chosenDay.toLocaleDateString()}`);
 
     /* Filter the data into an array of items matching today plus the number of days in the future */
     const filteredList = data.list.filter(item => {

@@ -34,6 +34,18 @@
     #hamburger-icon {
         display: none;
     }
+
+        select,
+        input,
+        option,
+        textarea {
+            min-height: auto;
+            font-size: 1rem;
+        }
+
+                input[type="radio"] {
+                    width: auto;
+                }
 }
 
 @media screen and (width >=750px) {

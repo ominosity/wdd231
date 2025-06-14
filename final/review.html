@@ -28,12 +28,14 @@
 
     <script src="scripts/dates.mjs" type="module"></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/review.mjs" type="module"></script>
 </head>
 
 <body>
     <header>
         <div class="logo-title">
-            <img src="images/logo.webp" alt="Easy Hiking in the Central Willamette Valley Logo" width="186" height="100">
+            <img src="images/logo.webp" alt="Easy Hiking in the Central Willamette Valley Logo" width="186"
+                height="100">
             <span>Easy Hiking in the Central Willamette Valley</span>
         </div>
         <div id="hamburger-icon" class="toggle show"><img src="images/hamburger.svg" alt="Hamburger icon"></div>
@@ -41,7 +43,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="hikes">Hikes</a></li>
+                <li><a href="hikes.html">Hikes</a></li>
                 <li><a href="#" class="active">Review</a></li>
             </ul>
         </nav>
@@ -50,14 +52,90 @@
         <h1>Review</h1>
         <section>
             <h2>The Review Process</h2>
-            <p>While we wish we could give a person review of all the hikes on our site, we haven't yet had time to try all of them. Many come from web searches and are just clarified and summarized here. Your hike reviews allow us to focus only on hikes that are easy, beautiful, fun, or at least accessible to beginners.</p>
+            <p>While we wish we could give a personal review of all the hikes on our site, we haven't had the
+                opportunity to try all of them. Many come from web searches and are just clarified and summarized here.
+                Your hike reviews allow us to focus only on hikes that are easy, beautiful, and fun.</p>
         </section>
-        <section>
-            <h2>Review a hike</h2>
-            <form action="thank-you.html">
-                <button>Submit my review</button>
-            </form>
-        </section>
+        <div class="hike-listing">
+            <section>
+                <h2>Review a hike</h2>
+                <form id="trail-review" method="get" action="thank-you.html">
+                    <p>Please answer as many of the below prompts as you can. Questions prepended with a red <span class="required"> </span> are required.</p>
+                    <label>
+                        <span class="required"> </span>Which hike would you like to review?
+                        <select id="hike" name="hike" required>
+                            <option value="" disabled selected hidden>Select an option</option>
+                        </select>
+                    </label>
+                    <fieldset>
+                        <legend>
+                            <span class="required"> </span>How would you describe the difficulty of the hike?
+                        </legend>
+                        <label>
+                            <input type="radio" name="difficulty" value="easy" required>
+                            Easy
+                        </label>
+                        <label>
+                            <input type="radio" name="difficulty" value="medium" required>
+                            Medium
+                        </label>
+                        <label>
+                            <input type="radio" name="difficulty" value="hard" required>
+                            Hard
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            How would you describe the scenery of the hike?
+                        </legend>
+                        <label>
+                            <input type="radio" name="scenery" value="bland">
+                            Bland
+                        </label>
+                        <label>
+                            <input type="radio" name="scenery" value="ok">
+                            Ok
+                        </label>
+                        <label>
+                            <input type="radio" name="scenery" value="beautiful">
+                            Beautiful
+                        </label>
+                        <label>
+                            <input type="radio" name="scenery" value="mixed">
+                            Mixed
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            Would (will) you do this hike again?
+                        </legend>
+                        <label>
+                            <input type="radio" name="repeat" value="no-chance">
+                            No Chance
+                        </label>
+                        <label>
+                            <input type="radio" name="repeat" value="maybe">
+                            Maybe
+                        </label>
+                        <label>
+                            <input type="radio" name="repeat" value="probably">
+                            Probably
+                        </label>
+                        <label>
+                            <input type="radio" name="repeat" value="definitely">
+                            Definitely
+                        </label>
+                    </fieldset>
+                    <label>
+                        How would you describe the hike (in 200 characters or less)? 
+                    <textarea rows="4" id="description" name="description" maxlength="200"></textarea>
+                </label>
+                    <button>Submit my review</button>
+                </form>
+            </section>
+            <div id="hike-summary">
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy;<span class="copyright-date"></span> 😺 Richard Burgener 😺 WDD231</p>

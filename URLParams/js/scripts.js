@@ -1,8 +1,8 @@
 const getString = window.location.search;
-console.log(getString);
+// console.log(getString);
 
 const myInfo = new URLSearchParams(getString);
-console.table(myInfo);
+// console.table(myInfo);
 
 // console.log(myInfo.get('first'));
 // console.log(myInfo.get('last'));

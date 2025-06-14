@@ -281,38 +281,39 @@ section img {
 }
 
 /* Hiking page styles*/
-#hike-listing {
+.hike-listing {
     display: grid;
     grid-gap: var(--spacing);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: var(--spacing);
 }
 
-#hike-listing section {
+.hike-listing section {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-#hike-listing section h2 {
+.hike-listing section h2 {
     text-align: left;
 }
 
-#hike-listing section h3 {
+.hike-listing section h3 {
     margin: var(--spacing);
 }
 
-#hike-listing a {
+.hike-listing a {
     text-decoration: none;
     color: var(--dark-text-color);
     text-decoration: none;
 }
 
-#hike-listing section a:first-of-type:hover {
+.hike-listing section a:first-of-type:hover {
     text-decoration: underline;
 }
 
-#hike-listing section a:last-of-type {
+#trail-review button,
+.hike-listing section a:last-of-type {
     border: 1px solid var(--primary-color);
     margin: var(--spacing);
     padding: var(--spacing);
@@ -322,10 +323,88 @@ section img {
     font-weight: bold;
 }
 
-#hike-listing section a:last-of-type:hover {
+#trail-review button:hover,
+.hike-listing section a:last-of-type:hover {
     background: linear-gradient(170deg, var(--secondary-color), white 50%, var(--secondary-color));
 }
 
-#hike-listing section a:last-of-type:active {
+#trail-review button:active,
+.hike-listing section a:last-of-type:active {
     box-shadow: 2px 2px 5px var(--dark-text-color) inset;
+}
+
+/* Review page styles */
+#trail-review,
+fieldset,
+label {
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing);
+    font-weight: bold;
+    text-align: left;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset label {
+    flex-direction: row;
+    align-items: center;
+}
+
+label:has(input[type="radio"]) {
+    margin: 5px;
+}
+
+input[type="radio"] {
+    border: none;
+    box-shadow: none;
+    width: 44px;
+    margin-right: var(--spacing);
+}
+
+select,
+input,
+option,
+textarea {
+    min-height: 44px;
+    font-size: 1.3rem;
+    padding: var(--spacing);
+    border-radius: var(--corners);
+    box-shadow: 3px 3px 5px var(--primary-color);
+    width: 100%;
+    text-align: left;
+}
+
+.required::before {
+    content: '*';
+    color: red;
+}
+
+span {
+    display: inline;
+}
+
+label:has(select:required) {
+    display: block;
+}
+
+/* Thank you page styles */
+.review h3 {
+    margin: var(--spacing);
+}
+
+.review ul li,
+.review h3 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.review ul {
+    margin-top: 0;
+}
+
+#all-reviews {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
